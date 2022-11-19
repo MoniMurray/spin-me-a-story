@@ -3,6 +3,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import random
 import string
+import sys
 
 def greetings():
     user_name = input("Hello!  What is your name?\n")
@@ -14,10 +15,11 @@ def new_story(users_name):
         start_story = input(f"Select 'y for yes, or 'n' to exit.\ny/n \n")
 
         if start_story == 'y':
-            print("Once Upon a Time...")
+            print("\nThen let's begin...\n")
             break
         elif start_story == 'n':
-            print(f"Goodbye, {users_name}")
+            # print(f"Goodbye, {users_name}")
+            sys.exit()
             break
         
         elif user_continue(start_story, users_name):
@@ -84,7 +86,7 @@ def story_bones(users_name):
     "shouting", 
     "painting"]
 
-    opening_paragraph = random.choice(beginning) + f"{users_name}" + random.choice(character) + random.choice(verb)
+    opening_paragraph = random.choice(beginning) + ", " + f"{users_name}" + " and a friend, " + random.choice(character) + " were " + random.choice(verb) + "...\n\n"
     print(opening_paragraph)
     return opening_paragraph
 

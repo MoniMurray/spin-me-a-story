@@ -3,6 +3,12 @@
 When I decided to create a story generator based on my daughter's favourite activity, being told a random made-up story, I turned to Google to find out which other genius had worked on this before me.  And I found this!
 https://towardsdatascience.com/fantasy-story-prompt-generator-2f56bf98dbfa
 
+I needed to force an exit from the program when the user chose option 'n' when asked "Would you like to write a story, {username}?".  I Googled to find a suitable option and found this 
+
+https://www.askpython.com/python/examples/exit-a-python-program 
+
+and chose to import sys and use the sys.exit() method.
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome Monica Murray,
