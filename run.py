@@ -2,6 +2,7 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import random
+import string
 
 def greetings():
     user_name = input("Hello!  What is your name?\n")
@@ -36,8 +37,61 @@ def user_continue(start_story, users_name):
     
     return True
 
+def story_bones(users_name):
+    character = ["Aoife", "Shauna", "Eoin", "Millie", "Evie", "Lauren"]
+    beginning = [
+        "One fine morning", 
+        "It was dark and stormy", 
+        "The sun shone brightly",
+        "The birds were singing",
+        "I couldn't believe my eyes"]
+    time_of_day = ["yesterday", "evening", "tomorrow", "last night"]
+    dice_1 = [
+        "curious brown monkey", 
+        "shiny chalice", 
+        "speedometer", 
+        "rising sun", 
+        "red backpack", 
+        "prickly cactus"]
+    dice_2 = [
+        "peanuts", 
+        "dinosaur bones", 
+        "a bag of gold", 
+        "an igloo", 
+        "a spider", 
+        "a caterpiller"]
+    dice_3 = [
+        "jigsaw", 
+        "mountain peaks", 
+        "pirate's treasure chest", 
+        "precious eagle egg", 
+        "circus tent", 
+        "elephant"]
+    dice_4 = [
+        "music", 
+        "blackbird", 
+        "confusion", 
+        "an axe", 
+        "a ladder", 
+        "a telescope"]
+    verb = ["singing", 
+    "dancing", 
+    "walking", 
+    "listening", 
+    "digging", 
+    "cycling", 
+    "skating", 
+    "shouting", 
+    "painting"]
+
+    opening_paragraph = random.choice(beginning) + f"{users_name}" + random.choice(character) + random.choice(verb)
+    print(opening_paragraph)
+    return opening_paragraph
+
 def main():
+    
     users_name = greetings()
     start_new_story = new_story(users_name)
+    story_opening = story_bones(users_name)
 
 main()

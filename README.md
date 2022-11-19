@@ -1,3 +1,8 @@
+##Credits
+
+When I decided to create a story generator based on my daughter's favourite activity, being told a random made-up story, I turned to Google to find out which other genius had worked on this before me.  And I found this!
+https://towardsdatascience.com/fantasy-story-prompt-generator-2f56bf98dbfa
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome Monica Murray,
