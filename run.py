@@ -11,8 +11,56 @@ def greetings():
 
 class Story_bones:
     """
-    Define story elements to be called using random to build stories
+    Define story elements to be called using random to build stories.
     """
+    
+    character = ["Aoife", "Shauna", "Eoin", "Millie", "Evie", "Lauren"]
+    beginning = [
+            "One fine morning", 
+            "It was dark and stormy", 
+            "The sun shone brightly",
+            "The birds were singing",
+            "I couldn't believe my eyes"]
+    time_of_day = ["yesterday", "evening", "tomorrow", "last night"]
+    animal = ["a cat", "a rat", "a badger", "a bee", "a bird", "a paraqueet"]
+    dice_1 = [
+            "curious brown monkey", 
+            "shiny chalice", 
+            "speedometer", 
+            "rising sun", 
+            "red backpack", 
+            "prickly cactus"]
+    dice_2 = [
+            "peanuts", 
+            "dinosaur bones", 
+            "a bag of gold", 
+            "an igloo", 
+            "a spider", 
+            "a caterpiller"]
+    dice_3 = [
+            "jigsaw", 
+            "mountain peak", 
+            "pirate's treasure chest", 
+            "precious eagle egg", 
+            "circus tent", 
+            "elephant"]
+    dice_4 = [
+            "music", 
+            "blackbird", 
+            "confusion", 
+            "an axe", 
+            "a ladder", 
+            "a telescope"]
+    verb = ["singing", 
+        "dancing", 
+        "walking", 
+        "listening", 
+        "digging", 
+        "cycling", 
+        "skating", 
+        "shouting", 
+        "painting"]
+    
     def __init__(self, character, beginning, time_of_day, animal, dice_1, 
     dice_2, dice_3, dice_4, verb, users_name):
         self.character = character
@@ -24,59 +72,66 @@ class Story_bones:
         self.dice_3 = dice_3
         self.dice_4 = dice_4
         self.verb = verb
+        self.users_name = users_name
 
     def story_bricks (self):
-        character = ["Aoife", "Shauna", "Eoin", "Millie", "Evie", "Lauren"]
-        beginning = [
-            "One fine morning", 
-            "It was dark and stormy", 
-            "The sun shone brightly",
-            "The birds were singing",
-            "I couldn't believe my eyes"]
-        time_of_day = ["yesterday", "evening", "tomorrow", "last night"]
-        animal = ["a cat", "a rat", "a badger", "a bee", "a bird", "a paraqueet"]
-        dice_1 = [
-            "curious brown monkey", 
-            "shiny chalice", 
-            "speedometer", 
-            "rising sun", 
-            "red backpack", 
-            "prickly cactus"]
-        dice_2 = [
-            "peanuts", 
-            "dinosaur bones", 
-            "a bag of gold", 
-            "an igloo", 
-            "a spider", 
-            "a caterpiller"]
-        dice_3 = [
-            "jigsaw", 
-            "mountain peak", 
-            "pirate's treasure chest", 
-            "precious eagle egg", 
-            "circus tent", 
-            "elephant"]
-        dice_4 = [
-            "music", 
-            "blackbird", 
-            "confusion", 
-            "an axe", 
-            "a ladder", 
-            "a telescope"]
-        verb = ["singing", 
-        "dancing", 
-        "walking", 
-        "listening", 
-        "digging", 
-        "cycling", 
-        "skating", 
-        "shouting", 
-        "painting"]
+        # character = ["Aoife", "Shauna", "Eoin", "Millie", "Evie", "Lauren"]
+        # beginning = [
+        #     "One fine morning", 
+        #     "It was dark and stormy", 
+        #     "The sun shone brightly",
+        #     "The birds were singing",
+        #     "I couldn't believe my eyes"]
+        # time_of_day = ["yesterday", "evening", "tomorrow", "last night"]
+        # animal = ["a cat", "a rat", "a badger", "a bee", "a bird", "a paraqueet"]
+        # dice_1 = [
+        #     "curious brown monkey", 
+        #     "shiny chalice", 
+        #     "speedometer", 
+        #     "rising sun", 
+        #     "red backpack", 
+        #     "prickly cactus"]
+        # dice_2 = [
+        #     "peanuts", 
+        #     "dinosaur bones", 
+        #     "a bag of gold", 
+        #     "an igloo", 
+        #     "a spider", 
+        #     "a caterpiller"]
+        # dice_3 = [
+        #     "jigsaw", 
+        #     "mountain peak", 
+        #     "pirate's treasure chest", 
+        #     "precious eagle egg", 
+        #     "circus tent", 
+        #     "elephant"]
+        # dice_4 = [
+        #     "music", 
+        #     "blackbird", 
+        #     "confusion", 
+        #     "an axe", 
+        #     "a ladder", 
+        #     "a telescope"]
+        # verb = ["singing", 
+        # "dancing", 
+        # "walking", 
+        # "listening", 
+        # "digging", 
+        # "cycling", 
+        # "skating", 
+        # "shouting", 
+        # "painting"]
        
-        for i in character:
-            for i in beginning:
-                for i in verb:
-                    return f"{random.choice(beginning)}, {random.choice(character)} was {random.choice(verb)}"
+        for i in Story_bones.character:
+            for i in Story_bones.beginning:
+                for i in Story_bones.verb:
+                    for i in Story_bones.dice_3:
+                        return f"{random.choice(Story_bones.beginning)}, {random.choice(Story_bones.character)} was {random.choice(Story_bones.verb)} about a {random.choice(Story_bones.dice_3)} when ...\n"
+
+    def possibility_1(self):
+        for i in Story_bones.animal:
+            return f"{random.choice(Story_bones.animal)}"    
+                      
 # opening_paragraph = Story_bones(random.choice(self.beginning) + ", " + f"{users_name}" + " and a friend, " + random.choice(self.character) + " were " + random.choice(self.verb) + "...\n\n")
 # print(opening_paragraph)
     
@@ -95,7 +150,7 @@ def new_story(users_name):
             break
         
         elif user_continue(start_story, users_name):
-            print("OKAY")
+            # print("OKAY")
             break
         
     return start_story
@@ -180,5 +235,7 @@ def main():
     # first_choice = user_choose_path(story_options, users_name)
     opening_paragraph = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb','users_name')
     print(opening_paragraph.story_bricks())
+    option_1 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb','users_name')
+    print(option_1.possibility_1())
 
 main()
