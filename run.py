@@ -14,6 +14,13 @@ class Story_bones:
     Define story elements to be called using random to build stories.
     Lists will be class attributes to enable them be used within class methods.
     """
+    
+    beginning = [
+            "One fine morning", 
+            "It was dark and stormy", 
+            "The sun shone brightly",
+            "The birds were singing",
+            "I couldn't believe my eyes"]
     character = [
         "Aoife",
         "Shauna",
@@ -21,13 +28,16 @@ class Story_bones:
         "Millie",
         "Evie",
         "Lauren",
-        "Bailey"]
-    beginning = [
-            "One fine morning", 
-            "It was dark and stormy", 
-            "The sun shone brightly",
-            "The birds were singing",
-            "I couldn't believe my eyes"]
+        "Bailey"]    
+    verb = ["was singing about", 
+            "was dancing around", 
+            "was walking towards", 
+            "was listening to", 
+            "was digging for", 
+            "was cycling around", 
+            "was skating over", 
+            "was shouting about", 
+            "was painting"]
     time_of_day = ["yesterday", "this evening", "tomorrow", "last night"]
     animal = ["a cat", "a rat", "a badger", "a bee", "a bird", "a paraqueet"]
     dice_1 = [
@@ -58,15 +68,7 @@ class Story_bones:
             "an axe", 
             "a ladder", 
             "a telescope"]
-    verb = ["singing", 
-            "dancing", 
-            "walking", 
-            "listening", 
-            "digging", 
-            "cycling", 
-            "skating", 
-            "shouting", 
-            "painting"]
+
     quote = [
         "'Remember, brilliant acting runs in your family'", 
         "'This is almost finished'", 
@@ -92,7 +94,7 @@ class Story_bones:
             for i in Story_bones.beginning:
                 for i in Story_bones.verb:
                     for i in Story_bones.dice_3:
-                        return f"{random.choice(Story_bones.beginning)}, {random.choice(Story_bones.character)} was {random.choice(Story_bones.verb)} about a {random.choice(Story_bones.dice_3)} when ...\n"
+                        return f"{random.choice(Story_bones.beginning)}, {random.choice(Story_bones.character)} was {random.choice(Story_bones.verb)} a {random.choice(Story_bones.dice_3)} when ...\n"
 
     def possibility_1(self):
         for i in Story_bones.animal:
@@ -106,11 +108,14 @@ class Story_bones:
     
     def possibility_3(self):
         for i in Story_bones.animal:
-            return f"Option 3: when {random.choice(Story_bones.animal)} said \n"   
+            for i in Story_bones.quote:
+                return f"Option 3: suddenly {random.choice(Story_bones.animal)} said {random.choice(Story_bones.quote)}\n"   
                       
 # opening_paragraph = Story_bones(random.choice(self.beginning) + ", " + f"{users_name}" + " and a friend, " + random.choice(self.character) + " were " + random.choice(self.verb) + "...\n\n")
 # print(opening_paragraph)
-    
+
+
+
 
 def new_story(users_name):
     print(f"Would you like to write a story, {users_name}?")
@@ -142,57 +147,6 @@ def user_continue(start_story, users_name):
     
     return True
 
-# def story_bones(users_name):
-#     """
-#     Define story elements to be called using random to build stories
-#     """
-#     character = ["Aoife", "Shauna", "Eoin", "Millie", "Evie", "Lauren"]
-#     beginning = [
-#         "One fine morning", 
-#         "It was dark and stormy", 
-#         "The sun shone brightly",
-#         "The birds were singing",
-#         "I couldn't believe my eyes"]
-#     time_of_day = ["yesterday", "evening", "tomorrow", "last night"]
-#     animal = ["a cat", "a rat", "a badger", "a bee", "a bird", "a paraqueet"]
-#     dice_1 = [
-#         "curious brown monkey", 
-#         "shiny chalice", 
-#         "speedometer", 
-#         "rising sun", 
-#         "red backpack", 
-#         "prickly cactus"]
-#     dice_2 = [
-#         "peanuts", 
-#         "dinosaur bones", 
-#         "a bag of gold", 
-#         "an igloo", 
-#         "a spider", 
-#         "a caterpiller"]
-#     dice_3 = [
-#         "jigsaw", 
-#         "mountain peak", 
-#         "pirate's treasure chest", 
-#         "precious eagle egg", 
-#         "circus tent", 
-#         "elephant"]
-#     dice_4 = [
-#         "music", 
-#         "blackbird", 
-#         "confusion", 
-#         "an axe", 
-#         "a ladder", 
-#         "a telescope"]
-#     verb = ["singing", 
-#     "dancing", 
-#     "walking", 
-#     "listening", 
-#     "digging", 
-#     "cycling", 
-#     "skating", 
-#     "shouting", 
-#     "painting"]
-
 #     opening_paragraph = random.choice(beginning) + ", " + f"{users_name}" + " and a friend, " + random.choice(character) + " were " + random.choice(verb) + "...\n\n"
 #     print(opening_paragraph)
 #     # return opening_paragraph
@@ -202,6 +156,33 @@ def user_continue(start_story, users_name):
 #     + " named Puddles, spotted " + random.choice(dice_2) + " on a " + random.choice(dice_3) + " and ran off."
 #     return possibility
 
+def options():
+    while True: 
+        user_choice = input("Choose 1, 2 or 3 to continue the story!\n")
+        if user_choice == '1':
+            print("you chose path 1 which is an interesting short story") #code to run an interesting short story
+            break
+        elif user_choice == '2':
+            print("you chose story path 2 which is an alternative interesting story") #code to run an alternative interesting story
+            break
+        elif user_choice == '3':
+            print("you chose story path 3, a third option of a short story") #code to run a third option of a short story
+            break
+        elif user_options(user_choice):
+            break 
+    return user_choice
+
+def user_options(user_choice):
+    try:
+        if user_choice != '1':
+            if user_choice != '2':
+                if user_choice != '3':
+                    raise ValueError()
+    except ValueError as e:
+        print(f"ValueError: Choose 1, 2, or 3 to continue the story.\n")
+        return False
+    
+    return True
 
 def main():
     
@@ -217,6 +198,9 @@ def main():
     print(option_1.possibility_2())
     option_3 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote','users_name')
     print(option_1.possibility_3())
-    # start_another_story = new_story(users_name)
+    userchoices = options()
+    print(userchoices)
+
+    # start_new_story = new_story(users_name)   can I put a loop in main() to loop another story?
 
 main()
