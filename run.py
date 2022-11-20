@@ -14,8 +14,14 @@ class Story_bones:
     Define story elements to be called using random to build stories.
     Lists will be class attributes to enable them be used within class methods.
     """
-   
-    character = ["Aoife", "Shauna", "Eoin", "Millie", "Evie", "Lauren", "Bailey"]
+    character = [
+        "Aoife",
+        "Shauna",
+        "Eoin",
+        "Millie",
+        "Evie",
+        "Lauren",
+        "Bailey"]
     beginning = [
             "One fine morning", 
             "It was dark and stormy", 
@@ -53,22 +59,22 @@ class Story_bones:
             "a ladder", 
             "a telescope"]
     verb = ["singing", 
-        "dancing", 
-        "walking", 
-        "listening", 
-        "digging", 
-        "cycling", 
-        "skating", 
-        "shouting", 
-        "painting"]
+            "dancing", 
+            "walking", 
+            "listening", 
+            "digging", 
+            "cycling", 
+            "skating", 
+            "shouting", 
+            "painting"]
     quote = [
         "'Remember, brilliant acting runs in your family'", 
-    "'This is almost finished'", 
-    "'Lend me your ears'", 
-    "'A stitch in time, saves nine'"]
+        "'This is almost finished'", 
+        "'Lend me your ears'", 
+        "'A stitch in time, saves nine'"]
     
     def __init__(self, character, beginning, time_of_day, animal, dice_1, 
-    dice_2, dice_3, dice_4, verb, quote, users_name):
+        dice_2, dice_3, dice_4, verb, quote, users_name):
         self.character = character
         self.beginning = beginning
         self.time_of_day = time_of_day
@@ -81,7 +87,7 @@ class Story_bones:
         self.quote = quote
         self.users_name = users_name
 
-    def story_bricks (self):  
+    def story_bricks(self):  
         for i in Story_bones.character:
             for i in Story_bones.beginning:
                 for i in Story_bones.verb:
