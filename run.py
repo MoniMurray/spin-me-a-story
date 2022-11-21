@@ -183,18 +183,21 @@ def options():
     randomised story path.  Only user_options() input '1', '2' or '3' are valid input.
     """
     while True:
-        user_choice = input("Choose 1, 2 or 3 to continue the story!\n")
-        if user_choice == '1':
-            print("you chose path 1 which is an interesting short story")
-            #code to run an interesting short story
-            break
-        elif user_choice == '2':
-            print("you chose story path 2 which is an alternative interesting story")
-            #code to run an alternative interesting story
-            break
-        elif user_choice == '3':
-            print("you chose story path 3, a third option of a short story")
-            #code to run a third option of a short story
+        user_choice = input("Choose 1, 2 or 3 to continue the story!\n>>>")
+        # if user_choice == '1':
+        #     print("you chose path 1 which is an interesting short story")
+        #     #code to run an interesting short story
+        #     break
+        # elif user_choice == '2':
+        #     print("you chose story path 2 which is an alternative interesting story")
+        #     #code to run an alternative interesting story
+        #     break
+        # elif user_choice == '3':
+        #     print("you chose story path 3, a third option of a short story")
+        #     #code to run a third option of a short story
+        #     break
+        if user_choice == '1' or '2' or '3':
+            print(f"You chose story path {user_choice} which is a Very interesting story!")
             break
         elif user_options(user_choice):
             break
