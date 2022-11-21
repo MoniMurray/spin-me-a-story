@@ -4,10 +4,18 @@
 import random
 import string
 import sys
+import re
 
 
 def greetings():
     user_name = input("Hello!  What is your name?\n")
+    while True:
+        if user_name.isalpha():
+            print (f"Hello, {user_name}")
+            break
+        else:
+            user_name = input("Please type your name. \n")
+
     return user_name
 
 
