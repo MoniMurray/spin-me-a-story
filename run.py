@@ -135,32 +135,32 @@ def new_story(users_name):
     """
     print(f"Would you like to read a story, {users_name}?")
     while True:
-        start_story = input(f"Select 'y for yes, or 'n' to exit.\ny/n \n")
+        selection = input(f"Select 'y for yes, or 'n' to exit.\ny/n \n")
 
-        if start_story == 'y':
+        if selection == 'y':
             print("\nThen let's begin...\n")
             break
-        elif start_story == 'n':
+        elif selection == 'n':
             print(f"Goodbye, {users_name}")
             sys.exit()
             break
 
-        elif user_continue(start_story, users_name):
+        elif user_continue(selection, users_name):
             # print("OKAY")
             break
 
-    return start_story
+    return selection
 
 
-def user_continue(start_story, users_name):
+def user_continue(selection, users_name, the_end):
     """
     Add exception to return false to a try condition to ensure that only 'y' or 'n' 
     are valid user input. A false condition will prompt new_story() to continue it's 
     loop requesting valid user input.
     """
     try:
-        if start_story != 'y':
-            if start_story != 'n':
+        if selection != 'y':
+            if selection != 'n':
                 raise ValueError()
     except ValueError as e:
         print(f"ValueError: Please select either y/n {users_name}.\n")
@@ -184,21 +184,21 @@ def options():
     """
     while True:
         user_choice = input("Choose 1, 2 or 3 to continue the story!\n>>>")
-        # if user_choice == '1':
-        #     print("you chose path 1 which is an interesting short story")
-        #     #code to run an interesting short story
-        #     break
-        # elif user_choice == '2':
-        #     print("you chose story path 2 which is an alternative interesting story")
-        #     #code to run an alternative interesting story
-        #     break
-        # elif user_choice == '3':
-        #     print("you chose story path 3, a third option of a short story")
-        #     #code to run a third option of a short story
-        #     break
-        if user_choice == '1' or '2' or '3':
-            print(f"You chose story path {user_choice} which is a Very interesting story!")
+        if user_choice == '1':
+            print("you chose path 1 which is an interesting short story")
+            #code to run an interesting short story
             break
+        elif user_choice == '2':
+            print("you chose story path 2 which is an alternative interesting story")
+            #code to run an alternative interesting story
+            break
+        elif user_choice == '3':
+            print("you chose story path 3, a third option of a short story")
+            #code to run a third option of a short story
+            break
+        # if user_choice == '1' or '2' or '3':
+        #     print(f"You chose story path {user_choice} which is a Very interesting story!")
+        #     break
         elif user_options(user_choice):
             break
     return user_choice
@@ -218,6 +218,20 @@ def user_options(user_choice):
         return False
 
     return True
+
+# def ending():
+#     the_end = "The End"
+#     while True:
+#         if the_end == True:
+#             selection = input("The End.\nWould you like another story?\n")
+#             break
+#         else:
+#             user_continue(selection, users_name)
+#             # print("OKAY")
+#             break
+    
+#     return the_end
+
 
 
 def main():
@@ -239,8 +253,32 @@ def main():
     print(option_1.possibility_3())
     userchoices = options()
     print(userchoices)
-
-    # start_new_story = new_story(users_name)   can I put a loop in main() to loop another story?
+    start_another_story = new_story(users_name)
+    # end_story = ending()
+    
 
 
 main()
+
+# def another_one(main, users_name):    
+#     while True:
+#         if start_another_story == 'y':
+#             opening_paragraph = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
+#             print(opening_paragraph.story_bricks())
+#             option_1 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote','users_name')
+#             print(option_1.possibility_1())
+#             option_2 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote','users_name')
+#             print(option_1.possibility_2())
+#             option_3 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote','users_name')
+#             print(option_1.possibility_3())
+#             userchoices = options()
+#             print(userchoices)
+#             start_another_story = new_story(users_name)
+#             break
+#         else: 
+#             print(f"Goodbye, {users_name}")
+#             sys.exit()
+#     return start_another_story
+
+
+# another_tall_tale = another_one(main, users_name)
