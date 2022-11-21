@@ -8,10 +8,13 @@ import re
 
 
 def greetings():
+    """
+    Request user input's their name.  
+    The request will loop until a valid alphabetic name is entered.
+    """
     user_name = input("Hello!  What is your name?\n")
     while True:
         if user_name.isalpha():
-            print (f"Hello, {user_name}")
             break
         else:
             user_name = input("Please type your name. \n")
@@ -21,7 +24,7 @@ def greetings():
 
 class Story_bones:
     """
-    Define story elements to be called using random to build stories.
+    Define story elements to be called using random.choice() to build stories.
     Lists will be class attributes to enable them be used within class methods.
     """
     beginning = [
@@ -125,6 +128,11 @@ class Story_bones:
 
 
 def new_story(users_name):
+    """
+    Invite user to read a story.
+    User's answer must be either 'y' for yes or 'n' for no.
+    Loop will prompt until valid input is received.
+    """
     print(f"Would you like to read a story, {users_name}?")
     while True:
         start_story = input(f"Select 'y for yes, or 'n' to exit.\ny/n \n")
@@ -145,6 +153,11 @@ def new_story(users_name):
 
 
 def user_continue(start_story, users_name):
+    """
+    Add exception to return false to a try condition to ensure that only 'y' or 'n' 
+    are valid user input. A false condition will prompt new_story() to continue it's 
+    loop requesting valid user input.
+    """
     try:
         if start_story != 'y':
             if start_story != 'n':
@@ -165,6 +178,10 @@ def user_continue(start_story, users_name):
 #     return possibility
 
 def options():
+    """
+    Create loop inviting user to choose between option 1, 2, or 3 to continue
+    randomised story path.  Only user_options() input '1', '2' or '3' are valid input.
+    """
     while True:
         user_choice = input("Choose 1, 2 or 3 to continue the story!\n")
         if user_choice == '1':
@@ -185,6 +202,9 @@ def options():
 
 
 def user_options(user_choice):
+    """
+    Validate that only user input of '1', '2' or '3' will be accepted.
+    """
     try:
         if user_choice != '1':
             if user_choice != '2':
@@ -198,6 +218,9 @@ def user_options(user_choice):
 
 
 def main():
+    """
+    All application functions are called in this function.
+    """
     
     users_name = greetings()
     start_new_story = new_story(users_name)
