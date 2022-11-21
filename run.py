@@ -106,7 +106,7 @@ class Story_bones:
             for i in Story_bones.beginning:
                 for i in Story_bones.verb:
                     for i in Story_bones.dice_3:
-                        return f"{random.choice(Story_bones.beginning)}, {random.choice(Story_bones.character)} was {random.choice(Story_bones.verb)} a {random.choice(Story_bones.dice_3)} when ...\n"
+                        return f"{random.choice(Story_bones.beginning)}, {random.choice(Story_bones.character)} was {random.choice(Story_bones.verb)}\na {random.choice(Story_bones.dice_3)} when ...\n"
 
     def possibility_1(self, users_name):
         for i in Story_bones.animal:
@@ -119,7 +119,7 @@ class Story_bones:
                 for i in Story_bones.dice_2:
                     for i in Story_bones.dice_3:
                         for i in Story_bones.dice_1:
-                            return f"Option 2: and remembered that {random.choice(Story_bones.time_of_day)} {users_name}'s pet, {random.choice(Story_bones.animal)} named Puddles, spotted {random.choice(Story_bones.dice_2)} on a {random.choice(Story_bones.dice_3)}, ran off, and the {random.choice(Story_bones.dice_1)}...\n"   
+                            return f"Option 2: I remembered that {random.choice(Story_bones.time_of_day)} {users_name}'s pet,\n{random.choice(Story_bones.animal)} named Puddles, spotted {random.choice(Story_bones.dice_2)}\non a {random.choice(Story_bones.dice_3)}, ran off, and\nthe {random.choice(Story_bones.dice_1)}...\n"   
 
     def possibility_3(self):
         for i in Story_bones.animal:
@@ -280,6 +280,7 @@ main()
 #             print(option_1.possibility_3())
 #             userchoices = options()
 #             print(userchoices)
+            #   end_story = ending(selection, users_name)
 #             start_another_story = new_story(users_name)
 #             break
 #         else: 
