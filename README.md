@@ -9,6 +9,10 @@ https://www.askpython.com/python/examples/exit-a-python-program
 
 and chose to import sys and use the sys.exit() method.
 
+Writing a short story while writing and escaping while loops takes alot of time, so I used a little of the text from a story on this book site to help me speed up the non-code aspect of my project
+
+https://www.bookbrowse.com/excerpts/index.cfm/book_number/452/harry-potter-and-the-sorcerers-stone
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome Monica Murray,
