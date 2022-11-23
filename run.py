@@ -5,6 +5,8 @@ import random
 import string
 import sys
 import re
+import os
+os.system('cls' if os.name == 'nt' else 'clear')
 
 
 def greetings():
@@ -75,7 +77,7 @@ class Story_bones:
             "pirate's treasure chest",
             "precious eagle egg",
             "circus tent",
-            "elephant"]
+            "blue elephant"]
     dice_4 = [
             "music",
             "blackbird",
@@ -110,7 +112,7 @@ class Story_bones:
             for i in Story_bones.beginning:
                 for i in Story_bones.verb:
                     for i in Story_bones.dice_3:
-                        opening = (f"{random.choice(Story_bones.beginning)}, {random.choice(Story_bones.character)} {random.choice(Story_bones.verb)}\na {random.choice(Story_bones.dice_3)} when...\n\n (...to be continued...)")
+                        opening = (f"{random.choice(Story_bones.beginning)}, {random.choice(Story_bones.character)} {random.choice(Story_bones.verb)}\na {random.choice(Story_bones.dice_3)} when...\n")
         return opening
 
     def possibility_1(self, users_name):
@@ -138,7 +140,7 @@ def new_story(users_name):
     User's answer must be either 'y' for yes or 'n' for no.
     Loop will prompt until valid input is received.
     """
-    print(f"Would you like to read a story, {users_name}?")
+    print(f"\nWould you like to read a story, {users_name}?\n")
     while True:
         selection = input(f"Select 'y for yes, or 'n' to exit.\ny/n \n")
 
@@ -146,7 +148,7 @@ def new_story(users_name):
             print("\nThen let's begin at the beginning...\n")
             break
         elif selection == 'n':
-            print(f"Goodbye, {users_name}")
+            print(f"\nGoodbye, {users_name}.\n")
             sys.exit()
             break
 
@@ -187,7 +189,7 @@ def options():
             story = "\n Option 1, continued: \n\n...ran across the path, causing a total distraction.\nAfter seeing that, it seemed like a sensible idea to\ngo home, have a nap, and plan for tomorrow's great adventure.\nAnd oh, what an adventure that was going to be!\n "
             break
         elif user_choice == '2':
-            story = "\n Option 2, continued: \n\n...showed photographs of a large blond boy\nriding his first bicycle, on a\ncarousel at the fair, playing a computer game\nwith his father, being hugged and\nkissed by his mother. The room held no\nsign at all that another boy lived in the house, too.\n"
+            story = "\n Option 2, continued: \n\n...showed photographs of a large blond boy\nriding his first bicycle, on a\ncarousel at the fair, playing a computer game\nwith his father, being hugged and\nkissed by his mother.\n\n The room held no\nsign at all that another boy lived in the house, too.\n"
             break
         elif user_choice == '3':
             story = "\n Option 3, continued:\n\n...which brought to mind the brilliant poem:\nThere was a little girl\nAnd she had a little curl\nRight in the middle of her forhead\nWhen she was good\nShe was very very good\nBut when she was bad she was Horrid.\n"
@@ -244,7 +246,7 @@ def main():
     # first_choice = user_choose_path(story_options, users_name)
     opening_paragraph = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
     print(opening_paragraph.story_bricks())
-    print("\nChoose one of the following three path options to continue your story:\n")
+    print("\nChoose from one of the following three path options to continue your story:\n")
     option_1 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
     print(option_1.possibility_1(users_name))
     option_2 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
@@ -255,6 +257,7 @@ def main():
     print(userchoices)
 
     while ending(selection, users_name) == 'y':
+        os.system('cls' if os.name == 'nt' else 'clear')
         print(f"\n{users_name}'s New Story\n")
         opening_paragraph = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
         print(opening_paragraph.story_bricks())
@@ -271,5 +274,9 @@ def main():
     else:
         sys.exit()
 
+
+title = "Spin Me A Story\n- a random story generator\n"
+x = title.center(40)
+print(x)
 
 my_story = main()
