@@ -8,7 +8,7 @@ Users can choose the direction their bespoke story takes, see character names th
 
 A user's input is required to commence the game.  That input is their name - the user's name must be alphabetic and input cannot be bipassed with a space or the enter key.
 
-The user's name is then used to ask if they would like to read a story.  The text input response is limited to 'y' for Yes, or 'n' for No.  
+The user is asked if they would like to read a story.  The text input response is limited to 'y' for Yes, or 'n' for No.  
 
 If the user chooses 'n', the message "Goodbye, {username}." prints to the terminal and the application ends.  
 
@@ -16,27 +16,27 @@ If the user chooses 'y', the first line of a random short-story prints to the te
 
 On making a selection, the remainder of the short-story prints to the terminal.
 
-A final choice is offered to the user, with a 'y'/'n' input, to read another story or not.  If the user elects option 'y' for Yes, a loop begins and a new random short-story is generated.  If the user's choice is 'n' for No, the terminal message reads "Goodbye, {username}." and the application ends.
+A final choice is offered to the user, with a 'y'/'n' input, to read another story or not.  If the user elects option 'y' for Yes, a loop begins and a new random short-story is generated and printed to a cleared screen.  If the user's choice is 'n' for No, the terminal message reads "Goodbye, {username}." and the application ends.
 
-User input is limited to only the options provided in the terminal, and error messages are printed to prompt the user as to what input will be accepted if an error is made.
+User input is limited to only the options provided in the terminal, and error messages are printed to prompt the user as to what input will be accepted if an input error is made.
 
 ## Logic chart
 
-Before beginning to write the code for this project, I used a pencil and paper to draw out a path that a story would follow.  That initial path took some turns and dead-end forks.  I used Lucid Chart to build a flow-chart, which is diagramatically easy to follow and which provided some textual prompts to what my next steps should be during the coding process.
+Before beginning to write the code for this project, I used a pencil and paper to draw out a path that a story would follow.  That initial path took some turns and dead-end forks.  I used Lucid Chart to build a flow-chart as to the logical steps the application's code would need to take, which is diagramatically easy to follow and which provided some text reminders as to what my next steps should be during the coding process.
 
 ![Lucid Chart flow-chart](documentation/Lucidchart-flowchart.png)
 
 ## Credits
 
-When I decided to create a story generator based on my daughter's favourite activity, being told a random made-up story, I turned to Google to find out which other genius had worked on this before me.  And I found [this](https://towardsdatascience.com/fantasy-story-prompt-generator-2f56bf98dbfa)!
+When I decided to create a story generator based on my daughter's favourite activity, being told a random made-up story, I turned to Google to find out which other genius had worked on this before me.  And I found [this](https://towardsdatascience.com/fantasy-story-prompt-generator-2f56bf98dbfa) on www.towardsdatascience.com!
 
 I needed to force an exit from the program when the user chose option 'n' when asked "Would you like to write a story, {username}?".  I Googled to find a suitable option and found [this](https://www.askpython.com/python/examples/exit-a-python-program ) and chose to import sys and use the sys.exit() method.
 
 Writing a short story while writing and escaping while loops takes alot of time, so I got some inspiration on this book site to help me speed up the non-code aspect of my story generation project.  Please follow this [link](https://www.bookbrowse.com/excerpts/index.cfm/book_number/452/harry-potter-and-the-sorcerers-stone) to view the website.
 
-W3Schools came up first in my Google results when I searched how to center text on the terminal, please view [here](https://www.w3schools.com/python/ref_string_center.asp#:~:text=The%20center()%20method%20will,default)%20as%20the%20fill%20character.)
+W3Schools came up first in my Google results when I searched how to center text on the terminal, please view the link to that code [here](https://www.w3schools.com/python/trypython.asp?filename=demo_ref_string_center).
 
-There's alot happening on the terminal in this short-story generator.  To minimise distraction I wanted to clear the screen for the user on running the application.  To do this, I've used the import os function which I found here on [Stack Overflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) and which is effective.
+There's alot happening on the terminal in this short-story generator.  To minimise distraction I wanted to clear the screen for the user on running the application.  To do this, I've used the import os function which I found here on [Stack Overflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) and which is effective.  I use it on first running the application, and again at the beginning of the loop to start a new short-story.
 
 
 
