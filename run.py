@@ -9,7 +9,7 @@ import re
 
 def greetings():
     """
-    Request user input's their name.  
+    Request user input's their name.
     The request will loop until a valid alphabetic name is entered.
     """
     user_name = input("Hello!  What is your name?\n")
@@ -25,7 +25,7 @@ def greetings():
 class Story_bones:
     """
     Define story elements to be called using random.choice() to build
-    stories.  Lists will be class attributes to enable them be used 
+    stories.  Lists will be class attributes to enable them be used
     within class methods.
     """
     beginning = [
@@ -51,10 +51,10 @@ class Story_bones:
             "was skating over",
             "was shouting about",
             "was painting"]
-    time_of_day = ["yesterday", "this evening", "tomorrow", 
-            "last night"]
-    animal = ["a cat", "a rat", "a badger", "a bee", "a bird", 
-            "a paraqueet"]
+    time_of_day = ["yesterday", "this evening", "tomorrow",
+                   "last night"]
+    animal = ["a cat", "a rat", "a badger", "a bee", "a bird",
+              "a paraqueet"]
     dice_1 = [
             "curious brown monkey",
             "shiny chalice",
@@ -90,8 +90,8 @@ class Story_bones:
         "'Lend me your ears'",
         "'A stitch in time, saves nine'"]
 
-    def __init__(self, character, beginning, time_of_day, animal, 
-                 dice_1, dice_2, dice_3, dice_4, verb, quote, 
+    def __init__(self, character, beginning, time_of_day, animal,
+                 dice_1, dice_2, dice_3, dice_4, verb, quote,
                  users_name):
         self.character = character
         self.beginning = beginning
@@ -111,12 +111,12 @@ class Story_bones:
                 for i in Story_bones.verb:
                     for i in Story_bones.dice_3:
                         opening = (f"{random.choice(Story_bones.beginning)}, {random.choice(Story_bones.character)} {random.choice(Story_bones.verb)}\na {random.choice(Story_bones.dice_3)} when...\n\n (...to be continued...)")
-        return opening                        
+        return opening
 
     def possibility_1(self, users_name):
         for i in Story_bones.animal:
             for i in Story_bones.dice_2:
-                return f"Option 1: ...{random.choice(Story_bones.animal)} named {users_name}, carrying {random.choice(Story_bones.dice_2)},...\n"    
+                return f"Option 1: ...{random.choice(Story_bones.animal)} named {users_name}, carrying {random.choice(Story_bones.dice_2)},...\n"
 
     def possibility_2(self, users_name):
         for i in Story_bones.time_of_day:
@@ -124,15 +124,12 @@ class Story_bones:
                 for i in Story_bones.dice_2:
                     for i in Story_bones.dice_3:
                         for i in Story_bones.dice_1:
-                            return f"Option 2: ...I remembered that {random.choice(Story_bones.time_of_day)} {users_name}'s pet,\n{random.choice(Story_bones.animal)} named Puddles, spotted {random.choice(Story_bones.dice_2)} and...\n"   
+                            return f"Option 2: ...I remembered that {random.choice(Story_bones.time_of_day)} {users_name}'s pet,\n{random.choice(Story_bones.animal)} named Puddles, spotted {random.choice(Story_bones.dice_2)} and...\n"
 
     def possibility_3(self):
         for i in Story_bones.animal:
             for i in Story_bones.quote:
-                return f"Option 3: ...suddenly, {random.choice(Story_bones.animal)} said, {random.choice(Story_bones.quote)}...\n"   
-
-# opening_paragraph = Story_bones(random.choice(self.beginning) + ", " + f"{users_name}" + " and a friend, " + random.choice(self.character) + " were " + random.choice(self.verb) + "...\n\n")
-# print(opening_paragraph)
+                return f"Option 3: ...suddenly, {random.choice(Story_bones.animal)} said, {random.choice(Story_bones.quote)}...\n"
 
 
 def new_story(users_name):
@@ -162,9 +159,10 @@ def new_story(users_name):
 
 def user_continue(selection, users_name):
     """
-    Add exception to return false to a try condition to ensure that only 'y' or 'n' 
-    are valid user input. A false condition will prompt new_story() to continue it's 
-    loop requesting valid user input.
+    Add exception to return false to a try condition to ensure that
+    only 'y' or 'n' are valid user input. A false condition will
+    prompt new_story() to continue it's loop requesting valid user
+    input.
     """
     try:
         if selection != 'y':
@@ -176,35 +174,24 @@ def user_continue(selection, users_name):
 
     return True
 
-#     opening_paragraph = random.choice(beginning) + ", " + f"{users_name}" + " and a friend, " + random.choice(character) + " were " + random.choice(verb) + "...\n\n"
-#     print(opening_paragraph)
-#     # return opening_paragraph
-
-
 
 def options():
     """
-    Create loop inviting user to choose between option 1, 2, or 3 to 
-    continue the story path.  Only user_options() input '1', '2' or 
+    Create loop inviting user to choose between option 1, 2, or 3 to
+    continue the story path.  Only user_options() input '1', '2' or
     '3' are valid input.
     """
     while True:
         user_choice = input("Choose 1, 2 or 3 to continue the story!\n")
         if user_choice == '1':
             story = "\n Option 1, continued: \n\n...ran across the path, causing a total distraction.\nAfter seeing that, it seemed like a sensible idea to\ngo home, have a nap, and plan for tomorrow's great adventure.\nAnd oh, what an adventure that was going to be!\n "
-            #code to run an interesting short story
             break
         elif user_choice == '2':
             story = "\n Option 2, continued: \n\n...showed photographs of a large blond boy\nriding his first bicycle, on a\ncarousel at the fair, playing a computer game\nwith his father, being hugged and\nkissed by his mother. The room held no\nsign at all that another boy lived in the house, too.\n"
-            #code to run an alternative interesting story
             break
         elif user_choice == '3':
             story = "\n Option 3, continued:\n\n...which brought to mind the brilliant poem:\nThere was a little girl\nAnd she had a little curl\nRight in the middle of her forhead\nWhen she was good\nShe was very very good\nBut when she was bad she was Horrid.\n"
-            #code to run a third option of a short story
             break
-        # if user_choice == '1' or '2' or '3':
-        #     print(f"You chose story path {user_choice} which is a Very interesting story!")
-        #     break
         elif user_options(user_choice):
             break
     return story
@@ -225,6 +212,7 @@ def user_options(user_choice):
 
     return True
 
+
 def ending(selection, users_name):
     print(f"The End.\n\n\nWould you like another story, {users_name}?\n")
     while True:
@@ -242,7 +230,7 @@ def ending(selection, users_name):
         elif user_continue(selection, users_name):
             # print("OKAY")
             break
-    
+
     return selection
 
 
@@ -258,11 +246,11 @@ def main():
     opening_paragraph = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
     print(opening_paragraph.story_bricks())
     print("\nChoose one of the following three path options to continue your story:\n")
-    option_1 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote','users_name')
+    option_1 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
     print(option_1.possibility_1(users_name))
-    option_2 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote','users_name')
+    option_2 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
     print(option_1.possibility_2(users_name))
-    option_3 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote','users_name')
+    option_3 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
     print(option_1.possibility_3())
     userchoices = options()
     print(userchoices)
@@ -273,42 +261,17 @@ def main():
         opening_paragraph = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
         print(opening_paragraph.story_bricks())
         print("\nChoose one of the following three path options to continue your story:\n")
-        option_1 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote','users_name')
+        option_1 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
         print(option_1.possibility_1(users_name))
-        option_2 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote','users_name')
+        option_2 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
         print(option_1.possibility_2(users_name))
-        option_3 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote','users_name')
+        option_3 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
         print(option_1.possibility_3())
         userchoices = options()
         print(userchoices)
-        
+
     else:
         sys.exit()
-    
-    
+
+
 my_story = main()
-
-
-
-# def another_one(my_story):    
-#     while True:
-#         if start_another_story == 'y':
-#             opening_paragraph = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
-#             print(opening_paragraph.story_bricks())
-#             option_1 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote','users_name')
-#             print(option_1.possibility_1(users_name))
-#             option_2 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote','users_name')
-#             print(option_1.possibility_2(users_name))
-#             option_3 = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote','users_name')
-#             print(option_1.possibility_3())
-#             userchoices = options()
-#             print(userchoices)
-#             end_story = ending(selection, users_name)
-#             start_another_story = new_story(users_name)
-#             break
-#         else: 
-#             print(f"Goodbye, {users_name}")
-#             sys.exit()
-#     return start_another_story
-
-# another_tall_tale = another_one(my_story)
