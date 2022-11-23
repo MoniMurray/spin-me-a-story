@@ -242,7 +242,6 @@ def main():
     selection = new_story(users_name)
     # story_options = story_bones(users_name)
     # first_choice = user_choose_path(story_options, users_name)
-    
     opening_paragraph = Story_bones('character', 'beginning', 'time_of_day', 'animal', 'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
     print(opening_paragraph.story_bricks())
     print("\nChoose one of the following three path options to continue your story:\n")
@@ -254,7 +253,6 @@ def main():
     print(option_1.possibility_3())
     userchoices = options()
     print(userchoices)
-    # end_story = ending(selection, users_name)
 
     while ending(selection, users_name) == 'y':
         print(f"\n{users_name}'s New Story\n")
