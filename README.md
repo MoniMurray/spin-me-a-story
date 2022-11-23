@@ -1,17 +1,24 @@
+#Spin-me-a-Story
+
+Spin-me-a-Story is a Python terminal short-story generator, which runs in the Code Institute mock terminal on Heroku.
+
+User's can choose the direction their bespoke story takes, see character names they may recognise, and choose to read additional short-stories after the first ends.
+
+##Logic chart
+
+Before beginning to write the code for this project, I used a pencil and paper to draw out a path that a story would follow.  That initial path took some turns and dead-end forks.  I used Lucid Chart to build a flow-chart, which is diagramatically easy to follow and which provided some textual prompts to what my next steps should be during the coding process.
+
+![Lucid Chart flow-chart](documentation/Lucidchart-flowchart.png)
+
 ##Credits
 
-When I decided to create a story generator based on my daughter's favourite activity, being told a random made-up story, I turned to Google to find out which other genius had worked on this before me.  And I found this!
-https://towardsdatascience.com/fantasy-story-prompt-generator-2f56bf98dbfa
+When I decided to create a story generator based on my daughter's favourite activity, being told a random made-up story, I turned to Google to find out which other genius had worked on this before me.  And I found [this](https://towardsdatascience.com/fantasy-story-prompt-generator-2f56bf98dbfa)!
 
-I needed to force an exit from the program when the user chose option 'n' when asked "Would you like to write a story, {username}?".  I Googled to find a suitable option and found this 
+I needed to force an exit from the program when the user chose option 'n' when asked "Would you like to write a story, {username}?".  I Googled to find a suitable option and found [this](https://www.askpython.com/python/examples/exit-a-python-program ) and chose to import sys and use the sys.exit() method.
 
-https://www.askpython.com/python/examples/exit-a-python-program 
+Writing a short story while writing and escaping while loops takes alot of time, so I used a little of the text from [a story](https://www.bookbrowse.com/excerpts/index.cfm/book_number/452/harry-potter-and-the-sorcerers-stone) on this book site to help me speed up the non-code aspect of my project.
 
-and chose to import sys and use the sys.exit() method.
 
-Writing a short story while writing and escaping while loops takes alot of time, so I used a little of the text from a story on this book site to help me speed up the non-code aspect of my project
-
-https://www.bookbrowse.com/excerpts/index.cfm/book_number/452/harry-potter-and-the-sorcerers-stone
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
