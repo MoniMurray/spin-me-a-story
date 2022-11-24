@@ -27,8 +27,8 @@ def greetings():
 class Story_bones:
     """
     Define story elements to be called using random.choice() to build
-    stories.  Lists will be class attributes to enable them be used
-    within class methods.
+    stories.  Lists containing components for a story will be
+    class attributes to enable them be used within class methods.
     """
     beginning = [
         "One fine morning",
@@ -85,6 +85,22 @@ class Story_bones:
             "an axe",
             "a ladder",
             "a telescope"]
+    dice_5 = [
+        "A puzzled Giant, who had lost his glasses",
+        "An old lady, whose shimmering pendant was lost many years before",
+        "The kindly King Crab, who was beloved by his loyal subjects",
+        "An short-sighted Octopus",
+        "A powerful wizard lived in a palace with rooftops of shimmering gold"
+    ]
+
+    dice_6 = [
+        "a ninja",
+        "a pirate",
+        "a knight",
+        "a scientist",
+        "a storyteller",
+        "a magician"
+    ]
 
     quote = [
         "'Remember, brilliant acting runs in your family'",
