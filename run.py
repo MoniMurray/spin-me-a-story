@@ -112,13 +112,21 @@ class Story_bones:
             for i in Story_bones.beginning:
                 for i in Story_bones.verb:
                     for i in Story_bones.dice_3:
-                        opening = (f"{random.choice(Story_bones.beginning)}, {random.choice(Story_bones.character)} {random.choice(Story_bones.verb)}\na {random.choice(Story_bones.dice_3)} when...\n")
+                        opening = (
+                            f"{random.choice(Story_bones.beginning)}," 
+                            f"{random.choice(Story_bones.character)}" 
+                            f" {random.choice(Story_bones.verb)}\n"
+                            f"a {random.choice(Story_bones.dice_3)}" 
+                            f" when...\n")
         return opening
 
     def possibility_1(self, users_name):
         for i in Story_bones.animal:
             for i in Story_bones.dice_2:
-                return f"Option 1: ...{random.choice(Story_bones.animal)} named {users_name}, carrying {random.choice(Story_bones.dice_2)},...\n"
+                return (
+                    f"Option 1: ...{random.choice(Story_bones.animal)}"
+                    f" named {users_name}, carrying"
+                    f" {random.choice(Story_bones.dice_2)},...\n")
 
     def possibility_2(self, users_name):
         for i in Story_bones.time_of_day:
@@ -126,12 +134,22 @@ class Story_bones:
                 for i in Story_bones.dice_2:
                     for i in Story_bones.dice_3:
                         for i in Story_bones.dice_1:
-                            return f"Option 2: ...I remembered that {random.choice(Story_bones.time_of_day)} {users_name}'s pet,\n{random.choice(Story_bones.animal)} named Puddles, spotted {random.choice(Story_bones.dice_2)} and...\n"
+                            return (
+                                f"Option 2: ...I remembered that"
+                                f" {random.choice(Story_bones.time_of_day)}"
+                                f" {users_name}'s pet,\n"
+                                f" {random.choice(Story_bones.animal)}"
+                                f" named Puddles, spotted"
+                                f" {random.choice(Story_bones.dice_2)}"
+                                f" and...\n")
 
     def possibility_3(self):
         for i in Story_bones.animal:
             for i in Story_bones.quote:
-                return f"Option 3: ...suddenly, {random.choice(Story_bones.animal)} said, {random.choice(Story_bones.quote)}...\n"
+                return (
+                    f"Option 3: ...suddenly,"
+                    f" {random.choice(Story_bones.animal)} said,"
+                    f" {random.choice(Story_bones.quote)}...\n")
 
 
 def new_story(users_name):

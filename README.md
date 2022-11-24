@@ -1,12 +1,12 @@
 # Spin-me-a-Story
 
-Spin-me-a-Story is a Python terminal short-story generator, which runs in the Code Institute mock terminal on Heroku.
+Spin-me-a-Story is a Python terminal, interactive short-story generator, which runs in the Code Institute mock terminal on Heroku.
 
 Users can choose the direction their bespoke story takes, see character names they may recognise, and choose to read additional short-stories after the first ends.
 
 ## Features
 
-A user's input is required to commence the game.  That input is their name - the user's name must be alphabetic and input cannot be bipassed with a space or the enter key.
+A user's input is required to commence the game.  The user is asked "What is your name?".  The user's name must be alphabetic and input cannot be bipassed with a space or the enter key.
 
 The user is asked if they would like to read a story.  The text input response is limited to 'y' for Yes, or 'n' for No.  
 
@@ -37,6 +37,8 @@ Writing a short story while writing and escaping while loops takes alot of time,
 W3Schools came up first in my Google results when I searched how to center text on the terminal, please view the link to that code [here](https://www.w3schools.com/python/trypython.asp?filename=demo_ref_string_center).
 
 There's alot happening on the terminal in this short-story generator.  To minimise distraction I wanted to clear the screen for the user on running the application.  To do this, I've used the import os function which I found here on [Stack Overflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) and which is effective.  I use it on first running the application, and again at the beginning of the loop to start a new short-story.
+
+The CI linter returned a problem with the length of the f strings in my code.  These f strings are several random.choice() options returned to the user and are the basis of the randomised short-story lines so could not be recoded.  It took many searches and trials of suggested line continuation options, before I found the following entry on Stack Overflow which is *specific* to line continuation in f strings, and which suggests ending the first line of the f string with a closing quotation and enclosing each subsequent continuation line in it's own f string.  This works - it does not throw an error and, crucially, does not change the function of the code.  Thanks again to [Stack Overflow](https://stackoverflow.com/questions/45965007/multiline-f-string-in-python)!
 
 
 
