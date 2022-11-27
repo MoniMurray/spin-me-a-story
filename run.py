@@ -86,11 +86,12 @@ class Story_bones:
             "a ladder",
             "a telescope"]
     dice_5 = [
-        "A puzzled Giant, who had lost his glasses",
-        "An old lady, whose shimmering pendant was lost many years before",
-        "The kindly King Crab, who was beloved by his loyal subjects",
+        "A puzzled Giant, who had lost his glasses,",
+        "An old lady, whose shimmering pendant was lost many years before,",
+        "The kindly King Crab, who was beloved by his loyal subjects,",
         "An short-sighted Octopus",
-        "A powerful wizard lived in a palace with rooftops of shimmering gold"
+        "A powerful wizard, who lived in a palace with"
+        " rooftops of shimmering gold,"
     ]
 
     dice_6 = [
@@ -189,11 +190,12 @@ class Story_bones:
                 for i in Story_bones.dice_5:
                     for i in Story_bones.dice_6:
                         story = (
-                    f"...began to tell a story.  {random.choice(Story_bones.dice_5)}"
-                    f" saw a very large crowd of people gathered outside the gates of"
-                    f" the local carnival, where"
+                    f"\nOption 1, continued:\n\n...began to tell a story."
+                    f"\n{random.choice(Story_bones.dice_5)}"
+                    f" saw a very large\ncrowd of people gathered outside"
+                    f" the gates\nof the local carnival, where"
                     f" {random.choice(Story_bones.dice_6)}"
-                    f" was coming to perform their show.\n")
+                    f" was\ncoming to perform their show.\n")
                        # (
             #     "\n Option 1, continued: \n\n...ran across the path,"
             #     " causing a total distraction.\nAfter seeing that, it seemed"
@@ -202,13 +204,27 @@ class Story_bones:
             #     " was going to be!\n ")
                 break
             elif user_choice == '2':
-                story = (
+                for i in Story_bones.quote:
+                    for i in Story_bones.dice_6:
+                        story = (
+                    f"\nOption 2, continued:\n\n...a silvery voice behind"
+                    f"\n them said {random.choice(Story_bones.quote)},"
+                    f" which made no sense whatsoever!\n"
+                    f"{random.choice(Story_bones.dice_5)}\nsaid: 'I'm so"
+                    f" glad to see you, please stay for tea.'  Afterwards,"
+                    f" when\neveryone was full, {random.choice(Story_bones.dice_6)}"
+                    f" danced and sang and performed a wonderful show.\n"
+                    f"After seeing that, it seemed like a sensible idea"
+                    f" to play with\n{random.choice(Story_bones.animal)}," 
+                    f" go home, have a nap, and plan for tomorrow's"
+                    f" great adventure.\nAnd oh, what an adventure that"
+                    f" was going to be!\n ")
                 "\n Option 2, continued: \n\n...showed photographs"
                 " of a large blond boy\nriding his first bicycle, on a\n"
                 "carousel at the fair, playing a computer game\nwith his"
                 " father, being hugged and\nkissed by his mother.\n\nThe"
                 " room held no\nsign at all that another boy lived in the"
-                " house, too.\n")
+                " house, too.\n"
                 break
             elif user_choice == '3':
                 story = (
