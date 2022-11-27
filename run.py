@@ -124,6 +124,9 @@ class Story_bones:
         self.users_name = users_name
 
     def story_bricks(self):
+        """
+        Generate random short-story opening line.
+        """
         for i in Story_bones.character:
             for i in Story_bones.beginning:
                 for i in Story_bones.verb:
@@ -137,6 +140,9 @@ class Story_bones:
         return opening
 
     def possibility_1(self, users_name):
+        """
+        Generate random first option path to continue short-story.
+        """
         for i in Story_bones.animal:
             for i in Story_bones.dice_2:
                 return (
@@ -145,6 +151,9 @@ class Story_bones:
                     f" {random.choice(Story_bones.dice_2)},...\n")
 
     def possibility_2(self, users_name):
+        """
+        Generate random second option path to continue short-story.
+        """
         for i in Story_bones.time_of_day:
             for i in Story_bones.animal:
                 for i in Story_bones.dice_2:
@@ -160,6 +169,9 @@ class Story_bones:
                                 f" and...\n")
 
     def possibility_3(self):
+        """
+        Generate random third option path to continue short-story.
+        """
         for i in Story_bones.animal:
             for i in Story_bones.quote:
                 return (
@@ -267,6 +279,9 @@ def user_options(user_choice):
 
 
 def ending(selection, users_name):
+    """
+    Get user input to either start another story loop or end and exit.
+    """
     print(f"The End.\n\n\nWould you like another story, {users_name}?\n")
     while True:
         selection = input(f"Select 'y for yes, or 'n' to exit.\ny/n \n")
