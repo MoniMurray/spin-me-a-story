@@ -2,7 +2,7 @@
 
 Spin-me-a-Story is a Python terminal, interactive short-story generator aimed at 'early readers' - the 6-10 age-group - which runs in the Code Institute mock terminal on Heroku.
 
-Users can choose the direction their bespoke story takes, see character names they may recognise, and choose to read additional short-stories after the first ends.
+Users can choose the direction their bespoke story takes, see character names they may recognise, and choose to generate and read additional short-stories after the first ends.
 
 ## Features
 
@@ -24,19 +24,19 @@ On commencement of the story, and each additional story, the terminal is cleared
 
 ## Logic chart
 
-Before beginning to write the code for this project, I used a pencil and paper to draw out a path that a story would follow.  That initial path took some turns and dead-end forks.  I used Lucid Chart to build a flow-chart as to the logical steps the application's code would need to take, which is diagramatically easy to follow and which provided some text reminders as to what my next steps should be during the coding process.
+Before beginning to write the code for this project, I used a pencil and paper to draw out a path that a story would follow.  I then used Lucid Chart to build a flow-chart as to the logical steps the application's code would need to take, and how loops would work, which is diagramatically easy to follow and which provided some text reminders as to what my next steps should be during the coding process.
 
 ![Lucid Chart flow-chart](documentation/Lucidchart-flowchart.png)
 
 ## Credits
 
-When I decided to create a story generator based on my daughter's favourite activity, being told a random made-up story, I turned to Google to find out which other genius had worked on this before me.  And I found [this](https://towardsdatascience.com/fantasy-story-prompt-generator-2f56bf98dbfa) on www.towardsdatascience.com!
+When I decided to create a story generator based on my daughter's favourite activity, being told a random made-up story, I turned to Google to find out which other genius had worked on this before me.  And I found [this](https://towardsdatascience.com/fantasy-story-prompt-generator-2f56bf98dbfa) on www.towardsdatascience.com!  It helped me form a logical step-plan to code the application.
 
 I needed to force an exit from the program when the user chose option 'n' when asked "Would you like to write a story, {username}?".  I Googled to find a suitable option and found [this](https://www.askpython.com/python/examples/exit-a-python-program ) and chose to import sys and use the sys.exit() method.
 
 Writing a short story while writing and escaping while loops takes alot of time, so I got some inspiration on this book site to help me speed up the non-code aspect of my story generation project.  Please follow this [link](https://www.bookbrowse.com/excerpts/index.cfm/book_number/452/harry-potter-and-the-sorcerers-stone) to view the website.
 
-W3Schools came up first in my Google results when I searched how to center text on the terminal, please view the link to that code [here](https://www.w3schools.com/python/trypython.asp?filename=demo_ref_string_center).
+W3Schools gave the best guidance when I searched how to center text on the terminal, please view the link to that code [here](https://www.w3schools.com/python/trypython.asp?filename=demo_ref_string_center).
 
 There's alot happening on the terminal in this short-story generator.  To minimise distraction I wanted to clear the screen for the user on running the application.  To do this, I've used the import os function which I found here on [Stack Overflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) and which is effective.  I use it on first running the application, and again at the beginning of the loop to start a new short-story.
 

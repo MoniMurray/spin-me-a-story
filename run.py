@@ -89,7 +89,7 @@ class Story_bones:
         "A puzzled Giant, who had lost his glasses,",
         "An old lady, whose shimmering pendant was lost many years before,",
         "The kindly King Crab, who was beloved by his loyal subjects,",
-        "An short-sighted Octopus",
+        "A short-sighted Octopus",
         "A powerful wizard, who lived in a palace with"
         " rooftops of shimmering gold,"
     ]
@@ -129,15 +129,15 @@ class Story_bones:
         Generate random short-story opening line.
         """
         first_line = [(i, j, k, l)
-            for i in Story_bones.character
-            for j in Story_bones.beginning
-            for k in Story_bones.verb
-            for l in Story_bones.dice_3]
+                      for i in Story_bones.character
+                      for j in Story_bones.beginning
+                      for k in Story_bones.verb
+                      for l in Story_bones.dice_3]
         opening = (f"{random.choice(Story_bones.beginning)},"
-                    f" {random.choice(Story_bones.character)}"
-                    f" {random.choice(Story_bones.verb)}\n"
-                    f"a {random.choice(Story_bones.dice_3)}"
-                    f" when...\n")
+                   f" {random.choice(Story_bones.character)}"
+                   f" {random.choice(Story_bones.verb)}\n"
+                   f"a {random.choice(Story_bones.dice_3)}"
+                   f" when...\n")
         return opening
 
     def possibility_1(self, users_name):
@@ -145,7 +145,7 @@ class Story_bones:
         Generate random first option path to continue short-story.
         """
         path_1 = [(a, b) for a in Story_bones.animal
-            for b in Story_bones.dice_2]
+                  for b in Story_bones.dice_2]
         return (
                 f"Option 1: ...{random.choice(Story_bones.animal)}"
                 f" named {users_name}, carrying"
@@ -156,11 +156,11 @@ class Story_bones:
         Generate random second option path to continue short-story.
         """
         path_2 = [(day, animal, dice_2, dice_3, dice_1)
-                for day in Story_bones.time_of_day
-                for animal in Story_bones.animal
-                for dice_2 in Story_bones.dice_2
-                for dice_3 in Story_bones.dice_3
-                for dice_1 in Story_bones.dice_1]
+                  for day in Story_bones.time_of_day
+                  for animal in Story_bones.animal
+                  for dice_2 in Story_bones.dice_2
+                  for dice_3 in Story_bones.dice_3
+                  for dice_1 in Story_bones.dice_1]
         return (f"Option 2: ...I remembered that"
                 f" {random.choice(Story_bones.time_of_day)}"
                 f" {users_name}'s pet,\n"
@@ -174,7 +174,7 @@ class Story_bones:
         Generate random third option path to continue short-story.
         """
         path_3 = [(animal, quotation) for animal in Story_bones.animal
-                for quotation in Story_bones.quote]
+                  for quotation in Story_bones.quote]
         return (f"Option 3: ...suddenly,"
                 f" {random.choice(Story_bones.animal)} said,"
                 f" {random.choice(Story_bones.quote)}...\n")
@@ -190,49 +190,58 @@ class Story_bones:
                 for i in Story_bones.dice_5:
                     for i in Story_bones.dice_6:
                         story = (
-                    f"\nOption 1, continued:\n\n...began to tell a story."
-                    f"\n{random.choice(Story_bones.dice_5)}"
-                    f" saw a very large\ncrowd of people gathered outside"
-                    f" the gates\nof the local carnival, where"
-                    f" {random.choice(Story_bones.dice_6)}"
-                    f" was\ncoming to perform their show.\n")
-                       # (
-            #     "\n Option 1, continued: \n\n...ran across the path,"
-            #     " causing a total distraction.\nAfter seeing that, it seemed"
-            #     " like a sensible idea to\ngo home, have a nap, and plan for"
-            #     " tomorrow's great adventure.\nAnd oh, what an adventure that"
-            #     " was going to be!\n ")
+                            f"\nOption 1, continued:\n\n...began to tell"
+                            f" a story.\n{random.choice(Story_bones.dice_5)}"
+                            f" saw\na very large crowd of people"
+                            f" gathered outside the gates\nof the local"
+                            f" carnival, where"
+                            f" {random.choice(Story_bones.dice_6)}"
+                            f" was\ncoming to perform their show.\n")
                 break
             elif user_choice == '2':
                 for i in Story_bones.quote:
                     for i in Story_bones.dice_6:
                         story = (
-                    f"\nOption 2, continued:\n\n...a silvery voice behind"
-                    f"\n them said {random.choice(Story_bones.quote)},"
-                    f" which made no sense whatsoever!\n"
-                    f"{random.choice(Story_bones.dice_5)}\nsaid: 'I'm so"
-                    f" glad to see you, please stay for tea.'  Afterwards,"
-                    f" when\neveryone was full, {random.choice(Story_bones.dice_6)}"
-                    f" danced and sang and performed a wonderful show.\n"
-                    f"After seeing that, it seemed like a sensible idea"
-                    f" to play with\n{random.choice(Story_bones.animal)}," 
-                    f" go home, have a nap, and plan for tomorrow's"
-                    f" great adventure.\nAnd oh, what an adventure that"
-                    f" was going to be!\n ")
-                "\n Option 2, continued: \n\n...showed photographs"
-                " of a large blond boy\nriding his first bicycle, on a\n"
-                "carousel at the fair, playing a computer game\nwith his"
-                " father, being hugged and\nkissed by his mother.\n\nThe"
-                " room held no\nsign at all that another boy lived in the"
-                " house, too.\n"
+                            f"\nOption 2, continued:\n\n...a silvery"
+                            f" voice behind them said"
+                            f" {random.choice(Story_bones.quote)},\n"
+                            f" which made no sense whatsoever!\n"
+                            f"{random.choice(Story_bones.dice_5)}"
+                            f" said:\n'I'm so glad to see you, please"
+                            f" stay for tea.'  Afterwards,"
+                            f" when\neveryone was full, "
+                            f"{random.choice(Story_bones.dice_6)}"
+                            f" danced and sang and performed a"
+                            f" wonderful show.\nAfter seeing that, it"
+                            f" seemed like a sensible idea to play with"
+                            f"\n{random.choice(Story_bones.animal)},"
+                            f" go home, have a nap, and plan for"
+                            f" tomorrow's great adventure.\nAnd oh, "
+                            f" what an adventure that was going to be!\n ")
                 break
             elif user_choice == '3':
-                story = (
-                "\n Option 3, continued:\n\n...which brought to"
-                " mind the brilliant poem:\nThere was a little girl\nAnd"
-                " she had a little curl\nRight in the middle of her forhead\n"
-                "When she was good\nShe was very very good\nBut when she"
-                " was bad she was Horrid.\n")
+                if user_choice == '3':
+                    for i in Story_bones.dice_5:
+                        for i in Story_bones.dice_4:
+                            for i in Story_bones.animal:
+                                story = (
+                                    f"\n Option 3, continued:..."
+                                    f"{random.choice(Story_bones.dice_5)}"
+                                    f" whose "
+                                    f"{random.choice(Story_bones.dice_4)}"
+                                    f" was magical too, "
+                                    f"showed photographs of"
+                                    f" {random.choice(Story_bones.animal)}"
+                                    f"\nriding his first bicycle, on a"
+                                    f" carousel at the fair, playing a"
+                                    f" computer game\nwith his father,"
+                                    f" being hugged and\nkissed"
+                                    f" by his grandmother.\n\nBut, "
+                                    f"there was a mystery - because"
+                                    f" the house held no\nsign at all"
+                                    f" that"
+                                    f" {random.choice(Story_bones.animal)}"
+                                    f"-boy lived there too!\n")
                 break
             elif user_options(user_choice):
                 break
@@ -281,44 +290,6 @@ def user_continue(selection, users_name):
         return False
 
     return True
-
-
-# def options():
-#     """
-#     Create loop inviting user to choose between option 1, 2, or 3 to
-#     continue the story path.  Only user_options() input '1', '2' or
-#     '3' are valid input.
-#     """
-#     while True:
-#         user_choice = input("Choose 1, 2 or 3 to continue the story!\n")
-#         if user_choice == '1':
-#             story = (
-#                 "\n Option 1, continued: \n\n...ran across the path,"
-#                 " causing a total distraction.\nAfter seeing that, it seemed"
-#                 " like a sensible idea to\ngo home, have a nap, and plan for"
-#                 " tomorrow's great adventure.\nAnd oh, what an adventure that"
-#                 " was going to be!\n ")
-#             break
-#         elif user_choice == '2':
-#             story = (
-#                 "\n Option 2, continued: \n\n...showed photographs"
-#                 " of a large blond boy\nriding his first bicycle, on a\n"
-#                 "carousel at the fair, playing a computer game\nwith his"
-#                 " father, being hugged and\nkissed by his mother.\n\nThe"
-#                 " room held no\nsign at all that another boy lived in the"
-#                 " house, too.\n")
-#             break
-#         elif user_choice == '3':
-#             story = (
-#                 "\n Option 3, continued:\n\n...which brought to"
-#                 " mind the brilliant poem:\nThere was a little girl\nAnd"
-#                 " she had a little curl\nRight in the middle of her forhead\n"
-#                 "When she was good\nShe was very very good\nBut when she"
-#                 " was bad she was Horrid.\n")
-#             break
-#         elif user_options(user_choice):
-#             break
-#     return story
 
 
 def user_options(user_choice):
@@ -383,7 +354,7 @@ def main():
     print(option_1.possibility_1(users_name))
     option_2 = Story_bones(
         'character', 'beginning', 'time_of_day', 'animal', 'dice_1',
-        'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6','verb',
+        'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6', 'verb',
         'quote', 'users_name')
     print(option_1.possibility_2(users_name))
     option_3 = Story_bones(
@@ -404,7 +375,7 @@ def main():
         print(f"\n{users_name}'s New Story\n")
         opening_paragraph = Story_bones(
             'character', 'beginning', 'time_of_day', 'animal',
-            'dice_1', 'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6', 
+            'dice_1', 'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6',
             'verb', 'quote', 'users_name')
         print(opening_paragraph.story_bricks())
         print("\nChoose one of the following three path options"
@@ -436,7 +407,7 @@ def main():
         sys.exit()
 
 
-title = "Spin Me A Story\n- a random story generator\n"
+title = "Spin Me A Story\n- an interactive, random story generator\n"
 x = title.center(40)
 print(x)
 
