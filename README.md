@@ -20,6 +20,8 @@ A final choice is offered to the user, with a 'y'/'n' input, to read another sto
 
 User input is limited to only the options provided in the terminal, and error messages are printed to prompt the user as to what input will be accepted if an input error is made.
 
+On commencement of the story, and each additional story, the terminal is cleared of previous user prompts and input for a less cluttered user experience.
+
 ## Logic chart
 
 Before beginning to write the code for this project, I used a pencil and paper to draw out a path that a story would follow.  That initial path took some turns and dead-end forks.  I used Lucid Chart to build a flow-chart as to the logical steps the application's code would need to take, which is diagramatically easy to follow and which provided some text reminders as to what my next steps should be during the coding process.
