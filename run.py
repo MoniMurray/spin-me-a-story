@@ -127,57 +127,56 @@ class Story_bones:
         """
         Generate random short-story opening line.
         """
-        for i in Story_bones.character:
-            for i in Story_bones.beginning:
-                for i in Story_bones.verb:
-                    for i in Story_bones.dice_3:
-                        opening = (
-                            f"{random.choice(Story_bones.beginning)},"
-                            f" {random.choice(Story_bones.character)}"
-                            f" {random.choice(Story_bones.verb)}\n"
-                            f"a {random.choice(Story_bones.dice_3)}"
-                            f" when...\n")
+        first_line = [(i, j, k, l)
+            for i in Story_bones.character
+            for j in Story_bones.beginning
+            for k in Story_bones.verb
+            for l in Story_bones.dice_3]
+        opening = (f"{random.choice(Story_bones.beginning)},"
+                    f" {random.choice(Story_bones.character)}"
+                    f" {random.choice(Story_bones.verb)}\n"
+                    f"a {random.choice(Story_bones.dice_3)}"
+                    f" when...\n")
         return opening
 
     def possibility_1(self, users_name):
         """
         Generate random first option path to continue short-story.
         """
-        for i in Story_bones.animal:
-            for i in Story_bones.dice_2:
-                return (
-                    f"Option 1: ...{random.choice(Story_bones.animal)}"
-                    f" named {users_name}, carrying"
-                    f" {random.choice(Story_bones.dice_2)},...\n")
+        path_1 = [(a, b) for a in Story_bones.animal
+            for b in Story_bones.dice_2]
+        return (
+                f"Option 1: ...{random.choice(Story_bones.animal)}"
+                f" named {users_name}, carrying"
+                f" {random.choice(Story_bones.dice_2)},...\n")
 
     def possibility_2(self, users_name):
         """
         Generate random second option path to continue short-story.
         """
-        for i in Story_bones.time_of_day:
-            for i in Story_bones.animal:
-                for i in Story_bones.dice_2:
-                    for i in Story_bones.dice_3:
-                        for i in Story_bones.dice_1:
-                            return (
-                                f"Option 2: ...I remembered that"
-                                f" {random.choice(Story_bones.time_of_day)}"
-                                f" {users_name}'s pet,\n"
-                                f" {random.choice(Story_bones.animal)}"
-                                f" named Puddles, spotted"
-                                f" {random.choice(Story_bones.dice_2)}"
-                                f" and...\n")
+        path_2 = [(day, animal, dice_2, dice_3, dice_1)
+                for day in Story_bones.time_of_day
+                for animal in Story_bones.animal
+                for dice_2 in Story_bones.dice_2
+                for dice_3 in Story_bones.dice_3
+                for dice_1 in Story_bones.dice_1]
+        return (f"Option 2: ...I remembered that"
+                f" {random.choice(Story_bones.time_of_day)}"
+                f" {users_name}'s pet,\n"
+                f" {random.choice(Story_bones.animal)}"
+                f" named Puddles, spotted"
+                f" {random.choice(Story_bones.dice_2)}"
+                f" and...\n")
 
     def possibility_3(self):
         """
         Generate random third option path to continue short-story.
         """
-        for i in Story_bones.animal:
-            for i in Story_bones.quote:
-                return (
-                    f"Option 3: ...suddenly,"
-                    f" {random.choice(Story_bones.animal)} said,"
-                    f" {random.choice(Story_bones.quote)}...\n")
+        path_3 = [(animal, quotation) for animal in Story_bones.animal
+                for quotation in Story_bones.quote]
+        return (f"Option 3: ...suddenly,"
+                f" {random.choice(Story_bones.animal)} said,"
+                f" {random.choice(Story_bones.quote)}...\n")
 
 
 def new_story(users_name):
