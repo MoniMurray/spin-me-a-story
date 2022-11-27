@@ -109,7 +109,7 @@ class Story_bones:
         "'A stitch in time, saves nine'"]
 
     def __init__(self, character, beginning, time_of_day, animal,
-                 dice_1, dice_2, dice_3, dice_4, verb, quote,
+                 dice_1, dice_2, dice_3, dice_4, dice_5, dice_6, verb, quote,
                  users_name):
         self.character = character
         self.beginning = beginning
@@ -178,6 +178,50 @@ class Story_bones:
                 f" {random.choice(Story_bones.animal)} said,"
                 f" {random.choice(Story_bones.quote)}...\n")
 
+    def options(self):
+        """
+        User options to choose next path of story.
+        """
+        #   def continue_poss_1(self):
+        while True:
+            user_choice = input("Choose 1, 2 or 3 to continue the story!\n")
+            if user_choice == '1':
+                for i in Story_bones.dice_5:
+                    for i in Story_bones.dice_6:
+                        story = (
+                    f"...began to tell a story.  {random.choice(Story_bones.dice_5)}"
+                    f" saw a very large crowd of people gathered outside the gates of"
+                    f" the local carnival, where"
+                    f" {random.choice(Story_bones.dice_6)}"
+                    f" was coming to perform their show.\n")
+                       # (
+            #     "\n Option 1, continued: \n\n...ran across the path,"
+            #     " causing a total distraction.\nAfter seeing that, it seemed"
+            #     " like a sensible idea to\ngo home, have a nap, and plan for"
+            #     " tomorrow's great adventure.\nAnd oh, what an adventure that"
+            #     " was going to be!\n ")
+                break
+            elif user_choice == '2':
+                story = (
+                "\n Option 2, continued: \n\n...showed photographs"
+                " of a large blond boy\nriding his first bicycle, on a\n"
+                "carousel at the fair, playing a computer game\nwith his"
+                " father, being hugged and\nkissed by his mother.\n\nThe"
+                " room held no\nsign at all that another boy lived in the"
+                " house, too.\n")
+                break
+            elif user_choice == '3':
+                story = (
+                "\n Option 3, continued:\n\n...which brought to"
+                " mind the brilliant poem:\nThere was a little girl\nAnd"
+                " she had a little curl\nRight in the middle of her forhead\n"
+                "When she was good\nShe was very very good\nBut when she"
+                " was bad she was Horrid.\n")
+                break
+            elif user_options(user_choice):
+                break
+        return story
+
 
 def new_story(users_name):
     """
@@ -223,42 +267,42 @@ def user_continue(selection, users_name):
     return True
 
 
-def options():
-    """
-    Create loop inviting user to choose between option 1, 2, or 3 to
-    continue the story path.  Only user_options() input '1', '2' or
-    '3' are valid input.
-    """
-    while True:
-        user_choice = input("Choose 1, 2 or 3 to continue the story!\n")
-        if user_choice == '1':
-            story = (
-                "\n Option 1, continued: \n\n...ran across the path,"
-                " causing a total distraction.\nAfter seeing that, it seemed"
-                " like a sensible idea to\ngo home, have a nap, and plan for"
-                " tomorrow's great adventure.\nAnd oh, what an adventure that"
-                " was going to be!\n ")
-            break
-        elif user_choice == '2':
-            story = (
-                "\n Option 2, continued: \n\n...showed photographs"
-                " of a large blond boy\nriding his first bicycle, on a\n"
-                "carousel at the fair, playing a computer game\nwith his"
-                " father, being hugged and\nkissed by his mother.\n\nThe"
-                " room held no\nsign at all that another boy lived in the"
-                " house, too.\n")
-            break
-        elif user_choice == '3':
-            story = (
-                "\n Option 3, continued:\n\n...which brought to"
-                " mind the brilliant poem:\nThere was a little girl\nAnd"
-                " she had a little curl\nRight in the middle of her forhead\n"
-                "When she was good\nShe was very very good\nBut when she"
-                " was bad she was Horrid.\n")
-            break
-        elif user_options(user_choice):
-            break
-    return story
+# def options():
+#     """
+#     Create loop inviting user to choose between option 1, 2, or 3 to
+#     continue the story path.  Only user_options() input '1', '2' or
+#     '3' are valid input.
+#     """
+#     while True:
+#         user_choice = input("Choose 1, 2 or 3 to continue the story!\n")
+#         if user_choice == '1':
+#             story = (
+#                 "\n Option 1, continued: \n\n...ran across the path,"
+#                 " causing a total distraction.\nAfter seeing that, it seemed"
+#                 " like a sensible idea to\ngo home, have a nap, and plan for"
+#                 " tomorrow's great adventure.\nAnd oh, what an adventure that"
+#                 " was going to be!\n ")
+#             break
+#         elif user_choice == '2':
+#             story = (
+#                 "\n Option 2, continued: \n\n...showed photographs"
+#                 " of a large blond boy\nriding his first bicycle, on a\n"
+#                 "carousel at the fair, playing a computer game\nwith his"
+#                 " father, being hugged and\nkissed by his mother.\n\nThe"
+#                 " room held no\nsign at all that another boy lived in the"
+#                 " house, too.\n")
+#             break
+#         elif user_choice == '3':
+#             story = (
+#                 "\n Option 3, continued:\n\n...which brought to"
+#                 " mind the brilliant poem:\nThere was a little girl\nAnd"
+#                 " she had a little curl\nRight in the middle of her forhead\n"
+#                 "When she was good\nShe was very very good\nBut when she"
+#                 " was bad she was Horrid.\n")
+#             break
+#         elif user_options(user_choice):
+#             break
+#     return story
 
 
 def user_options(user_choice):
@@ -311,53 +355,66 @@ def main():
     # first_choice = user_choose_path(story_options, users_name)
     opening_paragraph = Story_bones(
         'character', 'beginning', 'time_of_day', 'animal',
-        'dice_1', 'dice_2', 'dice_3', 'dice_4',
+        'dice_1', 'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6',
         'verb', 'quote', 'users_name')
     print(opening_paragraph.story_bricks())
     print("\nChoose from one of the following three path options to"
           " continue your story:\n")
     option_1 = Story_bones(
         'character', 'beginning', 'time_of_day', 'animal', 'dice_1',
-        'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
+        'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6', 'verb',
+        'quote', 'users_name')
     print(option_1.possibility_1(users_name))
     option_2 = Story_bones(
         'character', 'beginning', 'time_of_day', 'animal', 'dice_1',
-        'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
+        'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6','verb',
+        'quote', 'users_name')
     print(option_1.possibility_2(users_name))
     option_3 = Story_bones(
         'character', 'beginning', 'time_of_day', 'animal', 'dice_1',
-        'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'users_name')
+        'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6', 'verb',
+        'quote', 'users_name')
     print(option_1.possibility_3())
-    userchoices = options()
-    print(userchoices)
+    # userchoices = options()
+    # print(userchoices)
+    userchoices = Story_bones(
+            'character', 'beginning', 'time_of_day', 'animal', 'dice_1',
+            'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'dice_5', 'dice_6',
+            'users_name')
+    print(userchoices.options())
 
     while ending(selection, users_name) == 'y':
         os.system('cls' if os.name == 'nt' else 'clear')
         print(f"\n{users_name}'s New Story\n")
         opening_paragraph = Story_bones(
             'character', 'beginning', 'time_of_day', 'animal',
-            'dice_1', 'dice_2', 'dice_3', 'dice_4', 'verb', 'quote',
-            'users_name')
+            'dice_1', 'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6', 
+            'verb', 'quote', 'users_name')
         print(opening_paragraph.story_bricks())
         print("\nChoose one of the following three path options"
               " to continue your story:\n")
         option_1 = Story_bones(
             'character', 'beginning', 'time_of_day', 'animal', 'dice_1',
-            'dice_2', 'dice_3', 'dice_4', 'verb', 'quote',
-            'users_name')
+            'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6', 'verb',
+            'quote', 'users_name')
         print(option_1.possibility_1(users_name))
         option_2 = Story_bones(
             'character', 'beginning', 'time_of_day', 'animal', 'dice_1',
-            'dice_2', 'dice_3', 'dice_4', 'verb', 'quote',
-            'users_name')
+            'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6', 'verb',
+            'quote', 'users_name')
         print(option_1.possibility_2(users_name))
         option_3 = Story_bones(
             'character', 'beginning', 'time_of_day', 'animal', 'dice_1',
-            'dice_2', 'dice_3', 'dice_4', 'verb', 'quote',
-            'users_name')
+            'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6', 'verb',
+            'quote', 'users_name')
         print(option_1.possibility_3())
-        userchoices = options()
-        print(userchoices)
+        # userchoices = options()
+        # print(userchoices)
+        userchoices = Story_bones(
+            'character', 'beginning', 'time_of_day', 'animal', 'dice_1',
+            'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'dice_5', 'dice_6',
+            'users_name')
+        print(userchoices.options())
 
     else:
         sys.exit()
