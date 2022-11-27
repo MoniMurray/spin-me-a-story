@@ -179,6 +179,7 @@ def new_story(users_name):
         selection = input(f"Select 'y for yes, or 'n' to exit.\ny/n \n")
 
         if selection == 'y':
+            os.system('cls' if os.name == 'nt' else 'clear')
             print("\nThen let's begin at the beginning...\n")
             break
         elif selection == 'n':
