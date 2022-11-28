@@ -1,11 +1,8 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
-import random
-import string
-import sys
-import re
-import os
+import random   # to select random story components for each story iteration.
+# import string 
+import sys   # use to enable user to exit() the application.
+# import re
+import os   # use to clear terminal of previous text to avoid clutter.
 os.system('cls' if os.name == 'nt' else 'clear')
 
 
@@ -19,7 +16,9 @@ def greetings():
         if user_name.isalpha():
             break
         else:
-            user_name = input("Please type your name. \n")
+            user_name = input("Please type your name using only upper"
+                              " or lower case letters.\nIntegers and/or"
+                              " spaces are not accepted input.\n")
 
     return user_name
 
@@ -128,11 +127,11 @@ class Story_bones:
         """
         Generate random short-story opening line.
         """
-        first_line = [(i, j, k, l)
+        first_line = [(i, j, k, m)
                       for i in Story_bones.character
                       for j in Story_bones.beginning
                       for k in Story_bones.verb
-                      for l in Story_bones.dice_3]
+                      for m in Story_bones.dice_3]
         opening = (f"{random.choice(Story_bones.beginning)},"
                    f" {random.choice(Story_bones.character)}"
                    f" {random.choice(Story_bones.verb)}\n"
@@ -233,7 +232,7 @@ class Story_bones:
                                     f"showed photographs of"
                                     f" {random.choice(Story_bones.animal)}"
                                     f"\nriding his first bicycle, on a"
-                                    f" carousel at the fair, playing a"
+                                    f" carousel at the fair,\nplaying a"
                                     f" computer game\nwith his father,"
                                     f" being hugged and\nkissed"
                                     f" by his grandmother.\n\nBut, "
@@ -411,4 +410,4 @@ title = "Spin Me A Story\n- an interactive, random story generator\n"
 x = title.center(40)
 print(x)
 
-my_story = main()
+main()

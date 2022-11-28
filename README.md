@@ -38,7 +38,45 @@ Writing a short story while writing and escaping while loops takes alot of time,
 
 W3Schools gave the best guidance when I searched how to center text on the terminal, please view the link to that code [here](https://www.w3schools.com/python/trypython.asp?filename=demo_ref_string_center).
 
-There's alot happening on the terminal in this short-story generator.  To minimise distraction I wanted to clear the screen for the user on running the application.  To do this, I've used the import os function which I found here on [Stack Overflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) and which is effective.  I use it on first running the application, and again at the beginning of the loop to start a new short-story.
+I also took guidance from W3Schools when limiting my user's input of their user name to alphabet only and used the isalpha() method from [here](https://www.w3schools.com/python/ref_string_isalpha.asp).
+
+There's alot of text being generated on the terminal in this short-story generator.  To minimise distraction I wanted to clear the screen for the user on running the application.  To do this, I've used the import os function which I found here on [Stack Overflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) and which is effective.  I use it on first running the application, and again at the beginning of the loop to start a new short-story.
 
 The CI linter returned a problem with the length of the f strings in my code.  These f strings are several random.choice() options returned to the user and are the basis of the randomised short-story lines so could not be recoded.  It took many searches and trials of suggested line continuation options, before I found the following entry on Stack Overflow which is *specific* to line continuation in f strings, and which suggests ending the first line of the f string with a closing quotation and enclosing each subsequent continuation line in it's own f string.  This works - it does not throw an error and, crucially, does not change the function of the code.  Thanks again to [Stack Overflow](https://stackoverflow.com/questions/45965007/multiline-f-string-in-python)!
+
+## Deployment
+
+This application is deployed to, and hosted on, Heroku.
+
+The following are the deployment steps I followed:
+
+ - Ensure all changes were commited to GitHub;
+ - Login to Heroku;
+ On the Heroku dashboard:
+ - Select the 'Create New App' button;
+ - Choose and enter an application name for the new application in the text box provided, and select my region from the drop list ie. Europe, then click 'Create';
+ Next, move to the Heroku Settings tab by clicking on 'Settings' at the top of the dashboard:
+ - Select the 'Reveal Config Var' button in the 'Config Vars' section of this screen;
+ - In the 'Key' field type "PORT", in the 'Value' field type "8000";
+ - Click on the 'Add' button to add this credential to the deployed application;
+ - Move down the screen slightly to the 'Buildpack' section of this screen: 
+ - Select 'Add Buildpack' button;
+ - First select 'Python' from the pop-up screen, and click 'Save Changes' button to include this buildpack in the application - this pop-up screen closes automatically;
+ - Again, select 'Add Buildpack' button;
+ - Now select 'Nodejs' from the pop-up screen, and click on 'Save Changes' button to also include this buildpack in the application;
+ Move to the Heroku Deploy tab by clicking on 'Deploy' at the top of the dashboard:
+ - In the 'Deployment Method' section of this tab, click on the GitHub button to 'connect to Github';
+ - Search for my GitHub repository name by typing it, **exactly** as it appears in GitHub, in the searchbar, and click on 'Search';
+ - Click on 'connect' to link up to my own GitHub repository code;
+ - Scroll down the page and in the 'Manual Deploy' section ensure the drop-down is set to 'Main', then click on 'Deploy branch' button to deploy the application:
+ - When this process has completed the text "Your application was successfully deployed" and a button 'View' appears.  Click this button to open a seperate terminal in which the application will run.
+
+## Testing
+
+I used the Code Institute linter to check my code was complying with PEP8 style guide.  Where errors arose with whitespace, line length, or indentation, I fixed them:
+
+![Code Institute Linter screenshot](documentation/CI Linter screenshot.png)
+
+
+
 
