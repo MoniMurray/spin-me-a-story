@@ -193,16 +193,18 @@ class Story_bones:
                             f" gathered outside the gates\nof the local"
                             f" carnival, where"
                             f" {random.choice(Story_bones.dice_6)}"
-                            f" was\ncoming to perform their show.\n")
+                            f" was\ncoming to perform their show.\n"
+                            f"A silvery"
+                            f" voice behind them said"
+                            f"\n{random.choice(Story_bones.quote)},\n"
+                            f"which made no sense whatsoever!\n"
+                            f"It had all been a dream!!\n")
                 break
             elif user_choice == '2':
                 for i in Story_bones.quote:
                     for i in Story_bones.dice_6:
                         story = (
-                            f"\nOption 2, continued:\n\n...a silvery"
-                            f" voice behind them said"
-                            f" {random.choice(Story_bones.quote)},\n"
-                            f" which made no sense whatsoever!\n"
+                            f"\nOption 2, continued:\n\n..."
                             f"{random.choice(Story_bones.dice_5)}"
                             f" said:\n'I'm so glad to see you, please"
                             f" stay for tea.'  Afterwards,"
@@ -222,9 +224,9 @@ class Story_bones:
                         for i in Story_bones.dice_4:
                             for i in Story_bones.animal:
                                 story = (
-                                    f"\n Option 3, continued:..."
+                                    f"\nOption 3, continued:..."
                                     f"{random.choice(Story_bones.dice_5)}"
-                                    f" whose "
+                                    f"\nwhose "
                                     f"{random.choice(Story_bones.dice_4)}"
                                     f" was magical too,\n"
                                     f"showed photographs of"
