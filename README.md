@@ -23,6 +23,7 @@ If the user chooses 'y', the first line of a random short-story prints to a clea
 On making a selection, the remainder of the short-story prints to the terminal.
 
 ![Remainder of short-story](documentation/Remainder-story.png)
+
 A final choice is offered to the user, with a 'y'/'n' input, to read another story or not.  If the user elects option 'y' for Yes, a loop begins and a new random short-story is generated and printed to a cleared screen.  If the user's choice is 'n' for No, the terminal message reads "Goodbye, {username}." and the application ends.
 
 User input is limited to only the options provided in the terminal, and error messages are printed to prompt the user as to what input will be accepted if an input error is made.
@@ -53,16 +54,19 @@ The CI linter returned a problem with the length of the f strings in my code.  T
 
 ## Deployment
 
-This application is deployed to, and hosted on, Heroku.
+This application is deployed to, and runs on, Heroku.
 
-The following are the deployment steps I followed:
+### The following are the deployment steps I followed:
 
  - Ensure all changes were commited to GitHub;
  - Login to Heroku;
- On the Heroku dashboard:
+ 
+ #### On the Heroku dashboard:
+
  - Select the 'Create New App' button;
  - Choose and enter an application name for the new application in the text box provided, and select my region from the drop list ie. Europe, then click 'Create';
- Next, move to the Heroku Settings tab by clicking on 'Settings' at the top of the dashboard - see screenshot below:
+ 
+ #### Next, move to the Heroku Settings tab by clicking on 'Settings' at the top of the dashboard - see screenshot below:
 
  ![Settings tab](documentation/Heroku-Settings-tab.png)
 
@@ -83,7 +87,8 @@ The following are the deployment steps I followed:
  - First select 'Python' from the pop-up screen, and click 'Save Changes' button to include this buildpack in the application - this pop-up screen closes automatically;
  - Again, select 'Add Buildpack' button;
  - Now select 'Nodejs' from the pop-up screen, and click on 'Save Changes' button to also include this buildpack in the application;
- Move to the Heroku Deploy tab by clicking on 'Deploy' at the top of the dashboard - see screenshot below:
+ 
+ #### Move to the Heroku Deploy tab by clicking on 'Deploy' at the top of the dashboard - see screenshot below:
 
  ![Deploy tab](documentation/Heroku-Deploy-tab.png)
 
@@ -97,13 +102,15 @@ The following are the deployment steps I followed:
 
  ![Manual Deploy](documentation/Heroku-Deploy-tab-Manual-deploy-Deploy-Branch-button.png)
 
- - When this process has completed the text "Your application was successfully deployed" and a button 'View' appears - see screenshot below;  
+ - When this process has completed the text "Your app was successfully deployed" and a button 'View' appears - see screenshot below;  
 
  ![Successfully Deployed!](documentation/Successfully-deployed.png)
 
  - Click this button to open a seperate terminal in which the application will run - see screenshot below.
 
  ![Python terminal](documentation/Python-terminal.png)
+
+ ### Deployment complete
 
 ## Testing
 
@@ -112,6 +119,8 @@ I used the Code Institute linter to check my code was complying with PEP8 style 
 ![Code Institute Linter screenshot](documentation/CI-Linter-screenshot.png)
 
 I tested each new addition or change to my code as I worked, whether that was in a function or loop or importing libraries.  
+
+Following deployment, I tested that the application runs as expected in the Python terminal. 
 
 
 
