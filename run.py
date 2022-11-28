@@ -130,7 +130,7 @@ class Story_bones:
                       for j in Story_bones.beginning
                       for k in Story_bones.verb
                       for m in Story_bones.dice_3]
-        opening = (f"{random.choice(Story_bones.beginning)},"
+        opening = (f"\n{random.choice(Story_bones.beginning)},"
                    f" {random.choice(Story_bones.character)}"
                    f" {random.choice(Story_bones.verb)}\n"
                    f"a {random.choice(Story_bones.dice_3)}"
@@ -144,7 +144,7 @@ class Story_bones:
         path_1 = [(a, b) for a in Story_bones.animal
                   for b in Story_bones.dice_2]
         return (
-                f"Option 1: ...{random.choice(Story_bones.animal)}"
+                f"1: ...{random.choice(Story_bones.animal)}"
                 f" named {users_name}, carrying"
                 f" {random.choice(Story_bones.dice_2)},...\n")
 
@@ -158,10 +158,10 @@ class Story_bones:
                   for dice_2 in Story_bones.dice_2
                   for dice_3 in Story_bones.dice_3
                   for dice_1 in Story_bones.dice_1]
-        return (f"Option 2: ...I remembered that"
+        return (f"2: ...I remembered that"
                 f" {random.choice(Story_bones.time_of_day)}"
                 f" {users_name}'s pet,\n"
-                f" {random.choice(Story_bones.animal)}"
+                f"     {random.choice(Story_bones.animal)}"
                 f" named Puddles, spotted"
                 f" {random.choice(Story_bones.dice_2)}"
                 f" and...\n")
@@ -172,7 +172,7 @@ class Story_bones:
         """
         path_3 = [(animal, quotation) for animal in Story_bones.animal
                   for quotation in Story_bones.quote]
-        return (f"Option 3: ...suddenly,"
+        return (f"3: ...suddenly,"
                 f" {random.choice(Story_bones.animal)} said,"
                 f" {random.choice(Story_bones.quote)}...\n")
 
@@ -183,11 +183,12 @@ class Story_bones:
         #   def continue_poss_1(self):
         while True:
             user_choice = input("Choose 1, 2 or 3 to continue the story!\n")
+            print("*" * 80)
             if user_choice == '1':
                 for i in Story_bones.dice_5:
                     for i in Story_bones.dice_6:
                         story = (
-                            f"\nOption 1, continued:\n\n...began to tell"
+                            f"\nThe story continues:\n\n...began to tell"
                             f" a story.\n{random.choice(Story_bones.dice_5)}"
                             f" saw\na very large crowd of people"
                             f" gathered outside the gates\nof the local"
@@ -204,7 +205,7 @@ class Story_bones:
                 for i in Story_bones.quote:
                     for i in Story_bones.dice_6:
                         story = (
-                            f"\nOption 2, continued:\n\n..."
+                            f"\nThe story continues:\n\n..."
                             f"{random.choice(Story_bones.dice_5)}"
                             f" said:\n'I'm so glad to see you, please"
                             f" stay for tea.'  Afterwards,"
@@ -224,7 +225,7 @@ class Story_bones:
                         for i in Story_bones.dice_4:
                             for i in Story_bones.animal:
                                 story = (
-                                    f"\nOption 3, continued:..."
+                                    f"\nThe story continues:...\n\n"
                                     f"{random.choice(Story_bones.dice_5)}"
                                     f"\nwhose "
                                     f"{random.choice(Story_bones.dice_4)}"
@@ -337,13 +338,13 @@ def main():
     """
     users_name = greetings()
     selection = new_story(users_name)
-    # story_options = story_bones(users_name)
-    # first_choice = user_choose_path(story_options, users_name)
+    print("*" * 80)
     opening_paragraph = Story_bones(
         'character', 'beginning', 'time_of_day', 'animal',
         'dice_1', 'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6',
         'verb', 'quote', 'users_name')
     print(opening_paragraph.story_bricks())
+    print("*" * 80)
     print("\nChoose from one of the following three path options to"
           " continue your story:\n")
     option_1 = Story_bones(
@@ -355,28 +356,32 @@ def main():
         'character', 'beginning', 'time_of_day', 'animal', 'dice_1',
         'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6', 'verb',
         'quote', 'users_name')
-    print(option_1.possibility_2(users_name))
+    print(option_2.possibility_2(users_name))
     option_3 = Story_bones(
         'character', 'beginning', 'time_of_day', 'animal', 'dice_1',
         'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6', 'verb',
         'quote', 'users_name')
-    print(option_1.possibility_3())
-    # userchoices = options()
-    # print(userchoices)
+    print(option_3.possibility_3())
+    
     userchoices = Story_bones(
             'character', 'beginning', 'time_of_day', 'animal', 'dice_1',
             'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'dice_5', 'dice_6',
             'users_name')
+    
     print(userchoices.options())
+    print("*" * 80)
+    
 
     while ending(selection, users_name) == 'y':
         os.system('cls' if os.name == 'nt' else 'clear')
         print(f"\n{users_name}'s New Story\n")
+        print("*" * 80)
         opening_paragraph = Story_bones(
             'character', 'beginning', 'time_of_day', 'animal',
             'dice_1', 'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6',
             'verb', 'quote', 'users_name')
         print(opening_paragraph.story_bricks())
+        print("*" * 80)
         print("\nChoose one of the following three path options"
               " to continue your story:\n")
         option_1 = Story_bones(
@@ -388,26 +393,28 @@ def main():
             'character', 'beginning', 'time_of_day', 'animal', 'dice_1',
             'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6', 'verb',
             'quote', 'users_name')
-        print(option_1.possibility_2(users_name))
+        print(option_2.possibility_2(users_name))
         option_3 = Story_bones(
             'character', 'beginning', 'time_of_day', 'animal', 'dice_1',
             'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6', 'verb',
             'quote', 'users_name')
-        print(option_1.possibility_3())
-        # userchoices = options()
-        # print(userchoices)
+        print(option_3.possibility_3())
+        print("*" * 80)
         userchoices = Story_bones(
             'character', 'beginning', 'time_of_day', 'animal', 'dice_1',
             'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'dice_5', 'dice_6',
             'users_name')
         print(userchoices.options())
+        print("*" * 80)
 
     else:
         sys.exit()
 
 
-title = "Spin Me A Story\n- an interactive, random story generator\n"
-x = title.center(40)
+title = "'Spin Me A Story' - an interactive, random story generator\n"
+x = title.center(80)
+print("*" * 80)
 print(x)
+print("*" * 80)
 
 main()
