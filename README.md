@@ -55,31 +55,52 @@ The following are the deployment steps I followed:
  On the Heroku dashboard:
  - Select the 'Create New App' button;
  - Choose and enter an application name for the new application in the text box provided, and select my region from the drop list ie. Europe, then click 'Create';
- Next, move to the Heroku Settings tab by clicking on 'Settings' at the top of the dashboard:
+ Next, move to the Heroku Settings tab by clicking on 'Settings' at the top of the dashboard - see screenshot below:
+
  ![Settings tab](documentation/Heroku-Settings-tab.png)
- - Select the 'Reveal Config Var' button in the 'Config Vars' section of this screen;
+
+ - Select the 'Reveal Config Var' button in the 'Config Vars' section of this screen - see screenshot below;
+
  ![Reveal Config Vars](documentation/Heroku-Settings-tab-Config-Vars-Reveal-Config-Vars-button.png)
- - In the 'Key' field type "PORT", in the 'Value' field type "8000";
+
+ - In the 'Key' field type "PORT", in the 'Value' field type "8000" - see screenshot below;
+
  ![Key:Port](documentation/Heroku-Settings-tab-Config-Vars-Key-Value.png)
+
  - Click on the 'Add' button to add this credential to the deployed application;
  - Move down the screen slightly to the 'Buildpack' section of this screen: 
- - Select 'Add Buildpack' button;
+ - Select 'Add Buildpack' button - see screenshot below;
+
  ![Buildpacks](documentation/Heroku-Buildpacks.png)
+
  - First select 'Python' from the pop-up screen, and click 'Save Changes' button to include this buildpack in the application - this pop-up screen closes automatically;
  - Again, select 'Add Buildpack' button;
  - Now select 'Nodejs' from the pop-up screen, and click on 'Save Changes' button to also include this buildpack in the application;
- Move to the Heroku Deploy tab by clicking on 'Deploy' at the top of the dashboard:
+ Move to the Heroku Deploy tab by clicking on 'Deploy' at the top of the dashboard - see screenshot below:
+
+ ![Deploy tab](documentation/Heroku-Deploy-tab.png)
+
  - In the 'Deployment Method' section of this tab, click on the GitHub button to 'connect to Github';
  - Search for my GitHub repository name by typing it, **exactly** as it appears in GitHub, in the searchbar, and click on 'Search';
- - Click on 'connect' to link up to my own GitHub repository code;
+ - Click on 'connect' to link up to my own GitHub repository code - see screenshot below;
+
  ![Connected to GitHub](documentation/Heroku-Deploy-tab-Deployment-method-GitHub-connected.png)
- - Scroll down the page and in the 'Manual Deploy' section ensure the drop-down is set to 'Main', then click on 'Deploy branch' button to deploy the application:
+
+ - Scroll down the page and in the 'Manual Deploy' section ensure the drop-down is set to 'Main', then click on 'Deploy branch' button to deploy the application - see screenshot below:
+
  ![Manual Deploy](documentation/Heroku-Deploy-tab-Manual-deploy-Deploy-Branch-button.png)
- - When this process has completed the text "Your application was successfully deployed" and a button 'View' appears.  Click this button to open a seperate terminal in which the application will run.
+
+ - When this process has completed the text "Your application was successfully deployed" and a button 'View' appears - see screenshot below;  
+
+ ![Successfully Deployed!](documentation/Successfully-deployed.png)
+
+ - Click this button to open a seperate terminal in which the application will run - see screenshot below.
+
+ ![Python terminal](documentation/Python-terminal.png)
 
 ## Testing
 
-I used the Code Institute linter to check my code was complying with PEP8 style guide.  Where errors arose with whitespace, line length, or indentation, I fixed them:
+I used the Code Institute linter to check my code was complying with PEP8 style guide.  Where errors arose with whitespace, line length, or indentation, I fixed them firstly in the linter to ensure the error would be resolved, and then in the Gitpod code:
 
 ![Code Institute Linter screenshot](documentation/CI-Linter-screenshot.png)
 
