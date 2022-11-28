@@ -1,7 +1,5 @@
 import random   # to select random story components for each story iteration.
-# import string 
 import sys   # use to enable user to exit() the application.
-# import re
 import os   # use to clear terminal of previous text to avoid clutter.
 os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -228,13 +226,13 @@ class Story_bones:
                                     f"{random.choice(Story_bones.dice_5)}"
                                     f" whose "
                                     f"{random.choice(Story_bones.dice_4)}"
-                                    f" was magical too, "
+                                    f" was magical too,\n"
                                     f"showed photographs of"
                                     f" {random.choice(Story_bones.animal)}"
-                                    f"\nriding his first bicycle, on a"
+                                    f" riding his first bicycle,\non a"
                                     f" carousel at the fair,\nplaying a"
-                                    f" computer game\nwith his father,"
-                                    f" being hugged and\nkissed"
+                                    f" computer game with his father,\n"
+                                    f"being hugged and kissed"
                                     f" by his grandmother.\n\nBut, "
                                     f"there was a mystery - because"
                                     f" the house held no\nsign at all"

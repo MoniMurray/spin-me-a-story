@@ -6,16 +6,23 @@ Users can choose the direction their bespoke story takes, see character names th
 
 ## Features
 
-A user's input is required to commence the game.  The user is asked "What is your name?".  The user's name must be alphabetic and input cannot be bipassed with a space or the enter key.
+A user's input is required to commence the game.  The user is asked "What is your name?".  The user's name must be alphabetic and input cannot be bipassed with a space or the enter key.  An error message will display if user enters anything other than upper or lower case letters.
+
+![Username input](documentation/Username-prompt.png)
 
 The user is asked if they would like to read a story.  The text input response is limited to 'y' for Yes, or 'n' for No.  
 
 If the user chooses 'n', the message "Goodbye, {username}." prints to the terminal and the application ends.  
 
-If the user chooses 'y', the first line of a random short-story prints to the terminal, followed by an invitation to choose from three options to continue the short-story - the input from the user is limited to the integers 1, 2 or 3.  
+![User inputs 'n' to exit](documentation/User-input-exit.png)
+
+If the user chooses 'y', the first line of a random short-story prints to a cleared terminal, followed by an invitation to choose from three options to continue the short-story - the input from the user is limited to the integers 1, 2 or 3.  
+
+![First line of story](documentation/First-iteration-story.png)
 
 On making a selection, the remainder of the short-story prints to the terminal.
 
+![Remainder of short-story](documentation/Remainder-story.png)
 A final choice is offered to the user, with a 'y'/'n' input, to read another story or not.  If the user elects option 'y' for Yes, a loop begins and a new random short-story is generated and printed to a cleared screen.  If the user's choice is 'n' for No, the terminal message reads "Goodbye, {username}." and the application ends.
 
 User input is limited to only the options provided in the terminal, and error messages are printed to prompt the user as to what input will be accepted if an input error is made.
@@ -103,6 +110,8 @@ The following are the deployment steps I followed:
 I used the Code Institute linter to check my code was complying with PEP8 style guide.  Where errors arose with whitespace, line length, or indentation, I fixed them firstly in the linter to ensure the error would be resolved, and then in the Gitpod code:
 
 ![Code Institute Linter screenshot](documentation/CI-Linter-screenshot.png)
+
+I tested each new addition or change to my code as I worked, whether that was in a function or loop or importing libraries.  
 
 
 
