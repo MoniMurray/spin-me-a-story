@@ -180,7 +180,6 @@ class Story_bones:
         """
         User options to choose next path of story.
         """
-        #   def continue_poss_1(self):
         while True:
             user_choice = input("Choose 1, 2 or 3 to continue the story!\n")
             print("*" * 80)
@@ -268,7 +267,6 @@ def new_story(users_name):
             break
 
         elif user_continue(selection, users_name):
-            # print("OKAY")
             break
 
     return selection
@@ -317,8 +315,6 @@ def ending(selection, users_name):
         selection = input(f"Select 'y for yes, or 'n' to exit.\ny/n \n")
 
         if selection == 'y':
-            # print("\nOkay...\n")
-            # another_one(my_story):
             break
         elif selection == 'n':
             print(f"Goodbye, {users_name}")
@@ -326,7 +322,6 @@ def ending(selection, users_name):
             break
 
         elif user_continue(selection, users_name):
-            # print("OKAY")
             break
 
     return selection
@@ -362,15 +357,12 @@ def main():
         'dice_2', 'dice_3', 'dice_4', 'dice_5', 'dice_6', 'verb',
         'quote', 'users_name')
     print(option_3.possibility_3())
-    
     userchoices = Story_bones(
             'character', 'beginning', 'time_of_day', 'animal', 'dice_1',
             'dice_2', 'dice_3', 'dice_4', 'verb', 'quote', 'dice_5', 'dice_6',
             'users_name')
-    
     print(userchoices.options())
     print("*" * 80)
-    
 
     while ending(selection, users_name) == 'y':
         os.system('cls' if os.name == 'nt' else 'clear')
