@@ -49,11 +49,15 @@ class Story_bones:
             "was cycling around",
             "was skating over",
             "was shouting about",
-            "was painting"]
+            "was painting",
+            "was passing by",
+            "was looking for",
+            "was going for",
+            "was cooking"]
     time_of_day = ["yesterday", "this evening", "tomorrow",
-                   "last night"]
+                   "last night", "about 100 years ago", "in olden days"]
     animal = ["a cat", "a rat", "a badger", "a bee", "a bird",
-              "a paraqueet"]
+              "a paraqueet", "a snail", "a whale"]
     dice_1 = [
             "curious brown monkey",
             "shiny chalice",
