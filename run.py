@@ -321,6 +321,7 @@ def ending(selection, users_name):
         if selection == 'y':
             break
         elif selection == 'n':
+            os.system('cls' if os.name == 'nt' else 'clear')
             print(f"Goodbye, {users_name}")
             sys.exit()
             break
