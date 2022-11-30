@@ -30,6 +30,8 @@ User input is limited to only the options provided in the terminal, and error me
 
 On commencement of the story, and each additional story, the terminal is cleared of previous user prompts and input for a less cluttered user experience.
 
+![New Story](documentation/New-story.png)
+
 ## Logic chart
 
 Before beginning to write the code for this project, I used a pencil and paper to draw out a path that a story would follow.  I then used Lucid Chart to build a flow-chart as to the logical steps the application's code would need to take, and how loops would work, which is diagramatically easy to follow and which provided some text reminders as to what my next steps should be during the coding process.
@@ -46,11 +48,11 @@ Writing a short story while writing and escaping while loops takes alot of time,
 
 W3Schools gave the best guidance when I searched how to center text on the terminal, please view the link to that code [here](https://www.w3schools.com/python/trypython.asp?filename=demo_ref_string_center).
 
-I also took guidance from W3Schools when limiting my user's input of their user name to alphabet only and used the isalpha() method from [here](https://www.w3schools.com/python/ref_string_isalpha.asp).
+I also took guidance from W3Schools when limiting my user's input of their user name to alphabet only and opted to use the isalpha() method from [here](https://www.w3schools.com/python/ref_string_isalpha.asp) as it was the most appropriate to this application.
 
-There's alot of text being generated on the terminal in this short-story generator.  To minimise distraction I wanted to clear the screen for the user on running the application.  To do this, I've used the import os function which I found here on [Stack Overflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) and which is effective.  I use it on first running the application, and again at the beginning of the loop to start a new short-story.
+There is alot of text being generated on the terminal in this short-story generator.  To minimise distraction I wanted to clear the screen for the user on running the application.  To do this, I've used the import os function which I found here on [Stack Overflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) and which is effective.  I use it on first running the application, and again at the beginning of the loop to start a new short-story.
 
-The CI linter returned a problem with the length of the f strings in my code.  These f strings are several random.choice() options returned to the user and are the basis of the randomised short-story lines so could not be recoded.  It took many searches and trials of suggested line continuation options, before I found the following entry on Stack Overflow which is *specific* to line continuation in f strings, and which suggests ending the first line of the f string with a closing quotation and enclosing each subsequent continuation line in it's own f string.  This works - it does not throw an error and, crucially, does not change the function of the code.  Thanks again to [Stack Overflow](https://stackoverflow.com/questions/45965007/multiline-f-string-in-python)!
+The CI linter returned a problem with the length of the f strings in my code.  These f strings are several random.choice() options returned to the user and are the basis of the randomised short-story lines so could not be recoded.  It took many searches and trials of suggested line continuation options, before I found the following entry on Stack Overflow which is *specific* to line continuation in f strings, and which suggests ending the first line of the f string with a closing quotation and enclosing each subsequent continuation line in it's own f string and because the whole f string code is enclosed in parenthesis, each line continuation is concatenated.  This works - it does not throw an error and, crucially, does not change the function of the code.  Thanks again to [Stack Overflow](https://stackoverflow.com/questions/45965007/multiline-f-string-in-python)!
 
 ## Deployment
 
@@ -106,17 +108,21 @@ This application is deployed to, and runs on, Heroku.
 
  ![Successfully Deployed!](documentation/Successfully-deployed.png)
 
- - Click this button to open a seperate terminal in which the application will run - see screenshot below.
+ - Click this 'View' button to open a seperate terminal in which the application will run - see screenshot below.
 
  ![Python terminal](documentation/Python-terminal.png)
 
- ### Deployment complete
+ ### Deployment complete!
 
 ## Testing
 
 I used the Code Institute linter to check my code was complying with PEP8 style guide.  Where errors arose with whitespace, line length, or indentation, I fixed them firstly in the linter to ensure the error would be resolved, and then in the Gitpod code:
 
 ![Code Institute Linter screenshot](documentation/CI-Linter-screenshot.png)
+
+Confirmation of 'All-clear' on the CI Linter is below:
+
+![CI Linter - No Errors](documentation/Linter-No-Errors.png)
 
 I tested each new addition or change to my code as I worked, whether that was in a function or loop or importing libraries.  
 
