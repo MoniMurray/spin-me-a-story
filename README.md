@@ -1,6 +1,6 @@
 # Spin-me-a-Story
 
-Spin-me-a-Story is a Python terminal, interactive short-story generator aimed at 'early readers' - the 6-10 age-group - which runs in the Code Institute mock terminal on Heroku.
+Spin-me-a-Story is a Python terminal, interactive short-story generator aimed at 'early readers' - the imaginative 6-10 age-group - which runs in the Code Institute mock terminal on Heroku.
 
 Users can choose the direction their bespoke story takes, see character names they may recognise, and choose to generate and read additional short-stories after the first ends.
 
