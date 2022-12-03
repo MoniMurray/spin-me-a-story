@@ -289,7 +289,7 @@ def user_continue(selection, users_name):
             if selection != 'n':
                 raise ValueError()
     except ValueError as e:
-        print(f"ValueError: Please select either y/n {users_name}.\n")
+        print(f"ValueError: Please select lowercase y/n {users_name}.\n")
         return False
 
     return True

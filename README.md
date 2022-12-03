@@ -1,6 +1,6 @@
 # Spin-me-a-Story
 
-Spin-me-a-Story is a Python terminal, interactive short-story generator aimed at 'early readers' - the imaginative 6-10 age-group - which runs in the Code Institute mock terminal on Heroku.
+Spin-me-a-Story is a Python terminal, interactive short-story generator aimed at 'early readers' - the imaginative 6-10 age-group - who love nonsence-stories.  The application runs in the Code Institute mock terminal on Heroku.
 
 Users can choose the direction their bespoke story takes, see character names they may recognise, and choose to generate and read additional short-stories after the first ends.
 
@@ -10,7 +10,7 @@ A user's input is required to commence the game.  The user is asked "What is you
 
 ![Username input](documentation/Username-prompt.png)
 
-The user is asked if they would like to read a story.  The text input response is limited to 'y' for Yes, or 'n' for No.  
+The user is asked if they would like to read a story.  The text input response is limited to lowercase 'y' for Yes, or 'n' for No.  Uppercase Y/N will throw an error.
 
 If the user chooses 'n', the message "Goodbye, {username}." prints to the terminal and the application ends.  
 
@@ -54,7 +54,7 @@ There is alot of text being generated on the terminal in this short-story genera
 
 The CI linter returned a problem with the length of the f strings in my code.  These f strings are several random.choice() options returned to the user and are the basis of the randomised short-story lines so could not be recoded.  It took many searches and trials of suggested line continuation options, before I found the following entry on Stack Overflow which is *specific* to line continuation in f strings, and which suggests ending the first line of the f string with a closing quotation and enclosing each subsequent continuation line in it's own f string and because the whole f string code is enclosed in parenthesis, each line continuation is concatenated.  This works - it does not throw an error and, crucially, does not change the function of the code.  Thanks again to [Stack Overflow](https://stackoverflow.com/questions/45965007/multiline-f-string-in-python)!
 
-To enable the user to read the story elements, I introduced a slight delay in printing the instructions by importing the time module and using its sleep function.  I had found [this code](https://stackoverflow.com/questions/17432478/python-print-to-one-line-with-time-delay-between-prints) on stack overflow and found it a simple but effective inclusion to my application.  
+To enable the user to read the story elements, I introduced a slight delay in printing the instructions by importing the time module and using its sleep function.  I had found [this code](https://stackoverflow.com/questions/17432478/python-print-to-one-line-with-time-delay-between-prints) on Stack Overflow and found it a simple but effective inclusion to my application.  
 
 ## Deployment
 
