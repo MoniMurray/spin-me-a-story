@@ -138,7 +138,7 @@ Following deployment, I tested that the application runs as expected in the Pyth
 
 ## Future features
 
-Where a more tradition story plot is required to encourage reading in more established, older readers, by making changes only to the story components - these are defined in the lists in class Story_bones - the current code can used to build more robust short stories.  Repeating the options function for a defined number of iterations, a longer more detailed story can be built.
+Where a more traditional and detailed story plot is required to encourage reading in more established, older readers, and by making changes only to the story components - these are the contents of the lists in class Story_bones - the current code can used to build more robust short stories.  Repeating the options function for a defined number of iterations, a longer more detailed story can be built.
 
 
 
