@@ -57,7 +57,7 @@ class Story_bones:
             "was cooking"]
     time_of_day = ["yesterday", "this evening", "tomorrow",
                    "last night", "about 100 years ago", "in olden days"]
-    animal = ["a curious cat", "a roving rat", "a bald badger", 
+    animal = ["a curious cat", "a roving rat", "a bald badger",
               "a bashful bee", "a beautiful bird",
               "a peckish paraqueet", "a silent snail", "a witty whale"]
     dice_1 = [
@@ -261,7 +261,7 @@ def new_story(users_name):
     """
     print(f"\nWould you like to read a story, {users_name}?\n")
     while True:
-        selection = input(f"Select 'y for yes, or 'n' to exit.\ny/n \n")
+        selection = input("Select 'y' for yes, or 'n' to exit.\n")
 
         if selection == 'y':
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -306,7 +306,7 @@ def user_options(user_choice):
                 if user_choice != '3':
                     raise ValueError()
     except ValueError as e:
-        print(f"ValueError: Choose 1, 2, or 3 to continue the story.\n")
+        print("ValueError: You must make a valid input to continue.\n")
         return False
 
     return True
@@ -318,7 +318,7 @@ def ending(selection, users_name):
     """
     print(f"The End.\n\n\nWould you like another story, {users_name}?\n")
     while True:
-        selection = input(f"Select 'y for yes, or 'n' to exit.\ny/n \n")
+        selection = input("Select 'y for yes, or 'n' to exit.\n")
 
         if selection == 'y':
             break
@@ -409,7 +409,7 @@ def main():
         print(userchoices.options())
         print("*" * 80)
         sleep(10.0)
-
+        break
     else:
         sys.exit()
 
