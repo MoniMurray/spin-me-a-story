@@ -132,7 +132,7 @@ I tested each user-input as follows:
 
 ![User-input tests](documentation/user-input-tests.png)
 
-The only user input accepted by the application is that prescribed to the user in the prompts.
+The only user input accepted by the application is that prescribed to the user in the prompts.  An example of how specific this is: only lowercase y/n is accepted user input where prompted, uppercase Y/N is not accepted and will throw an error.
 
 Following deployment, I tested that the application runs as expected in the Python terminal. 
 
