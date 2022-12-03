@@ -57,8 +57,9 @@ class Story_bones:
             "was cooking"]
     time_of_day = ["yesterday", "this evening", "tomorrow",
                    "last night", "about 100 years ago", "in olden days"]
-    animal = ["a cat", "a rat", "a badger", "a bee", "a bird",
-              "a paraqueet", "a snail", "a whale"]
+    animal = ["a curious cat", "a roving rat", "a bald badger", 
+              "a bashful bee", "a beautiful bird",
+              "a peckish paraqueet", "a silent snail", "a witty whale"]
     dice_1 = [
             "curious brown monkey",
             "shiny chalice",
