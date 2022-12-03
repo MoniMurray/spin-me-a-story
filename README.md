@@ -126,7 +126,13 @@ Confirmation of 'All-clear' on the CI Linter is below:
 
 ![CI Linter - No Errors](documentation/Linter-No-Errors.png)
 
-I tested each new addition or change to my code as I worked, whether that was in a function or loop or importing libraries.  
+I tested each new addition or change to my code as I worked, whether that was in a function or loop or importing libraries.  Where errors printed to terminal, I made changes in that line of code and tested each change to ensure the application then functioned as expected.
+
+I tested each user-input as follows:
+
+![User-input tests](documentation/user-input-tests.png)
+
+The only user input accepted by the application is that prescribed to the user in the prompts.
 
 Following deployment, I tested that the application runs as expected in the Python terminal. 
 
