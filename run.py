@@ -1,7 +1,7 @@
 import random   # to select random story components for each story iteration.
 import sys   # use to enable user to exit() the application.
 import os   # use to clear terminal of previous text to avoid clutter.
-from time import sleep
+from time import sleep # use to bring a time lapse to printing text.
 os.system('cls' if os.name == 'nt' else 'clear')
 
 
