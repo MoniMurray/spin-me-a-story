@@ -1,3 +1,6 @@
+"""
+Import modules to use throughout this application
+"""
 import random   # to select random story components for each story iteration.
 import sys   # use to enable user to exit() the application.
 import os   # use to clear terminal of previous text to avoid clutter.
@@ -123,6 +126,8 @@ class Story_bones:
         self.dice_2 = dice_2
         self.dice_3 = dice_3
         self.dice_4 = dice_4
+        self.dice_5 = dice_5
+        self.dice_6 = dice_6
         self.verb = verb
         self.quote = quote
         self.users_name = users_name
@@ -289,7 +294,7 @@ def user_continue(selection, users_name):
         if selection != 'y':
             if selection != 'n':
                 raise ValueError()
-    except ValueError as e:
+    except ValueError:
         print(f"ValueError: Please select lowercase y/n {users_name}.\n")
         return False
 
@@ -305,7 +310,7 @@ def user_options(user_choice):
             if user_choice != '2':
                 if user_choice != '3':
                     raise ValueError()
-    except ValueError as e:
+    except ValueError:
         print("ValueError: You must make a valid input to continue.\n")
         return False
 
@@ -409,9 +414,6 @@ def main():
         print(userchoices.options())
         print("*" * 80)
         sleep(10.0)
-        break
-    else:
-        sys.exit()
 
 
 title = "'Spin Me A Story' - an interactive, random story generator\n"
