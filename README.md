@@ -136,6 +136,8 @@ The only user input accepted by the application is that prescribed to the user i
 
 Following deployment, I tested that the application runs as expected in the Python terminal. 
 
+A problem in gitpod relating to variables assigned but not used arose relating to variables assigned to list comprehensions in the class Story_bones.  The list comprehensions were used to shorten code where longer nested for loops had been used previously.
+
 ## Future features
 
 Where a more traditional and detailed story plot is required to encourage reading in more established, older readers, and by making changes only to the story components - these are the contents of the lists in class Story_bones - the current code can used to build more robust short stories.  Repeating the options function for a defined number of iterations, a longer more detailed story can be built.
