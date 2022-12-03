@@ -114,6 +114,15 @@ This application is deployed to, and runs on, Heroku.
 
  ![Python terminal](documentation/Python-terminal.png)
 
+ To create a completely independent copy of this application's Git repository:
+
+ - On GitHub.com, navigate to https://github.com/MoniMurray/spin-me-a-story;
+ - On the top-right corner of the page, click Fork;
+ - Select an owner for the forked repository;
+ - Select a name for the fork - by default it will have the same name as this original repository;
+ - You may opt to include a description for the newly forked repository;
+ - Choose to copy the main branch, then Create fork.
+
  ### Deployment complete!
 
 ## Testing
