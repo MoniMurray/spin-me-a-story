@@ -1,6 +1,7 @@
 import random   # to select random story components for each story iteration.
 import sys   # use to enable user to exit() the application.
 import os   # use to clear terminal of previous text to avoid clutter.
+from time import sleep
 os.system('cls' if os.name == 'nt' else 'clear')
 
 
@@ -345,6 +346,7 @@ def main():
         'verb', 'quote', 'users_name')
     print(opening_paragraph.story_bricks())
     print("*" * 80)
+    sleep(4.0)
     print("\nChoose from one of the following three path options to"
           " continue your story:\n")
     option_1 = Story_bones(
@@ -368,6 +370,7 @@ def main():
             'users_name')
     print(userchoices.options())
     print("*" * 80)
+    sleep(10.0)
 
     while ending(selection, users_name) == 'y':
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -379,6 +382,7 @@ def main():
             'verb', 'quote', 'users_name')
         print(opening_paragraph.story_bricks())
         print("*" * 80)
+        sleep(4.0)
         print("\nChoose one of the following three path options"
               " to continue your story:\n")
         option_1 = Story_bones(
@@ -403,6 +407,7 @@ def main():
             'users_name')
         print(userchoices.options())
         print("*" * 80)
+        sleep(10.0)
 
     else:
         sys.exit()
