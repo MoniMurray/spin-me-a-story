@@ -123,7 +123,7 @@ This application is deployed to, and runs on, Heroku.
  - You may opt to include a description for the newly forked repository;
  - Choose to copy the main branch, then Create fork.
 
- ### Deployment complete!
+ ### Deployment complete https://spin-me-a-story.herokuapp.com/!
 
 ## Testing
 
