@@ -1,6 +1,6 @@
 # Spin-me-a-Story
 
-Spin-me-a-Story is a Python terminal, interactive short-story generator aimed at 'early readers' - the imaginative 6-10 age-group - who love nonsence-stories.  The application runs in the Code Institute mock terminal on Heroku.
+Spin-me-a-Story is a Python terminal, interactive short-story generator aimed at 'early readers' - the imaginative 6-10 age-group - who love nonsense-stories.  The application runs in the Code Institute mock terminal on Heroku.
 
 Users can choose the direction their bespoke story takes, see character names they may recognise, and choose to generate and read additional short-stories after the first ends.
 
@@ -145,11 +145,11 @@ The only user input accepted by the application is that prescribed to the user i
 
 Following deployment, I tested that the application runs as expected in the Python terminal. 
 
-A problem in gitpod relating to variables assigned but not used arose relating to variables assigned to list comprehensions in the class Story_bones.  The list comprehensions were used to shorten code where longer nested for loops had been used previously.  Reluctuantly, though the code worked perfectly with the list comprehensions, they were an overuse of code and as the application works perfectly without them I opted to remove them to remove the problem warnings from gitpod.
+A problem in gitpod relating to variables assigned but not used arose relating to variables assigned to list comprehensions in the class Storybones.  The list comprehensions were used to shorten code where longer nested for loops had been used previously.  Reluctuantly, though the code worked perfectly with the list comprehensions, they were an overuse of code and as the application works perfectly without them I opted to delete them to remove the problem warnings from gitpod.
 
 ## Future features
 
-Where a more traditional and detailed story plot is required to encourage reading in more established, older readers, and by making changes only to the story components - these are the contents of the lists in class Story_bones - the current code can used to build more robust short stories.  Repeating the options function for a defined number of iterations, a longer more detailed story can be built.
+Where a more traditional and detailed story plot is required to encourage reading in more established, older readers, and by making changes only to the story components - these are the contents of the lists in class Storybones - the current code can used to build more robust short stories.  By repeating the options function for a defined number of iterations, a longer more detailed story can be built.
 
 
 
