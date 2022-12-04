@@ -58,7 +58,7 @@ class Storybones:
             "was looking for",
             "was going for",
             "was cooking"]
-    time_of_day = ["yesterday", "this evening", "tomorrow",
+    time_of_day = ["yesterday", "this evening",
                    "last night", "about 100 years ago", "in olden days"]
     animal = ["a curious cat", "a roving rat", "a bald badger",
               "a bashful bee", "a beautiful bird",
