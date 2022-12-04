@@ -239,7 +239,7 @@ def new_story(users_name):
     """
     Invite user to read a story.
     User's answer must be either 'y' for yes or 'n' for no.
-    Loop will prompt until valid input is received.
+    Prompt will loop until valid input is received.
     """
     print(f"\nWould you like to read a story, {users_name}?\n")
     while True:
