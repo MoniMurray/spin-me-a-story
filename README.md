@@ -145,7 +145,7 @@ The only user input accepted by the application is that prescribed to the user i
 
 Following deployment, I tested that the application runs as expected in the Python terminal. 
 
-A problem in gitpod relating to variables assigned but not used arose relating to variables assigned to list comprehensions in the class Story_bones.  The list comprehensions were used to shorten code where longer nested for loops had been used previously.
+A problem in gitpod relating to variables assigned but not used arose relating to variables assigned to list comprehensions in the class Story_bones.  The list comprehensions were used to shorten code where longer nested for loops had been used previously.  Reluctuantly, though the code worked perfectly with the list comprehensions, they were an overuse of code and as the application works perfectly without them I opted to remove them to remove the problem warnings from gitpod.
 
 ## Future features
 
