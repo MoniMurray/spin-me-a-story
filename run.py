@@ -92,21 +92,21 @@ class Storybones:
             "a ladder",
             "a telescope"]
     dice_5 = [
-        "A puzzled Giant, who had lost his glasses,",
-        "An old lady, whose shimmering pendant was lost many years before,",
+        "A generous Giant, who had lost his glasses,",
+        "An old lady, whose powerful pendant was lost many years before,",
         "The kindly King Crab, who was beloved by his loyal subjects,",
-        "A short-sighted Octopus",
-        "A powerful wizard, who lived in a palace with"
+        "A short-sighted Cyclops",
+        "A windswept wizard, who lived in a palace with"
         " rooftops of shimmering gold,"
     ]
 
     dice_6 = [
-        "a ninja",
-        "a pirate",
-        "a knight",
-        "a scientist",
-        "a storyteller",
-        "a magician"
+        "a nifty ninja",
+        "a peckish pirate",
+        "a naughty knight",
+        "a scared scientist",
+        "a startled storyteller",
+        "a magnetic magician"
     ]
 
     quote = [
